@@ -41,17 +41,31 @@ jobs:
           npm --prefix frontend ci --no-audit --no-fund
           python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Testler
-        shell: pwsh
+      # Her grup ayrı adım; kırılan testler ::error:: notu olarak düşer (notlar giriş yapmadan da okunur).
+      - name: Backend testleri
+        shell: bash
         run: |
-          dotnet test backend/FcMarket.Tests --nologo
-          if ($LASTEXITCODE -ne 0) { exit 1 }
-          python -m unittest discover -s tools/saveimport/tests
-          if ($LASTEXITCODE -ne 0) { exit 1 }
-          python -m unittest discover -s tools/assets/tests
-          if ($LASTEXITCODE -ne 0) { exit 1 }
-          npm --prefix frontend run test:e2e
-          if ($LASTEXITCODE -ne 0) { exit 1 }
+          set -o pipefail
+          if ! dotnet test backend/FcMarket.Tests --nologo --logger "console;verbosity=normal" 2>&1 | tee dotnet-test.log; then
+            grep -E '^\s*(Failed |Error Message|Expected|Actual|Assert\.|.*error [A-Z]+[0-9]+)' dotnet-test.log | head -40 \
+              | sed -E 's/^\s+//; s/^/::error title=Backend testi::/'
+            exit 1
+          fi
+
+      - name: Python testleri
+        shell: bash
+        run: |
+          set -o pipefail
+          for suite in tools/saveimport/tests tools/assets/tests; do
+            if ! python -m unittest discover -s "$suite" 2>&1 | tee python-test.log; then
+              grep -E '^(FAIL|ERROR):|Error:|Exception:|assert' python-test.log | head -40 \
+                | sed "s|^|::error title=Python testi ($suite)::|"
+              exit 1
+            fi
+          done
+
+      - name: Arayüz testleri
+        run: npm --prefix frontend run test:e2e -- --reporter=github,line
 
       - name: Paket
         shell: pwsh

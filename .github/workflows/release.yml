@@ -67,24 +67,35 @@ jobs:
       - name: Arayüz testleri
         run: npm --prefix frontend run test:e2e -- --reporter=github,line
 
+      - name: Inno Setup
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe")) { choco install innosetup -y --no-progress }
+
       - name: Paket
         shell: pwsh
-        run: ./publish.ps1 -Version ${{ steps.version.outputs.value }}
+        run: |
+          ./publish.ps1 -Version ${{ steps.version.outputs.value }}
+          if (-not (Test-Path artifacts/FcMarket-Setup.exe)) { throw "FcMarket-Setup.exe üretilmedi" }
 
-      # Sabit ad: README'deki releases/latest/download/FcMarket.zip bağlantısı her sürümde çalışır.
+      # Sabit adlar: README'deki releases/latest/download/... bağlantıları her sürümde çalışır.
       - name: SHA-256
         shell: pwsh
         run: |
           Copy-Item "artifacts/FcMarket-v${{ steps.version.outputs.value }}.zip" artifacts/FcMarket.zip
-          $hash = (Get-FileHash artifacts/FcMarket.zip -Algorithm SHA256).Hash.ToLowerInvariant()
-          "$hash  FcMarket.zip" | Set-Content -Encoding ascii artifacts/FcMarket.zip.sha256
+          foreach ($name in 'FcMarket-Setup.exe', 'FcMarket.zip') {
+            $hash = (Get-FileHash "artifacts/$name" -Algorithm SHA256).Hash.ToLowerInvariant()
+            "$hash  $name" | Set-Content -Encoding ascii "artifacts/$name.sha256"
+          }
 
       - name: Paketi sakla (elle çalıştırma)
         if: github.ref_type != 'tag'
         uses: actions/upload-artifact@v4
         with:
           name: FcMarket
-          path: artifacts/FcMarket.zip*
+          path: |
+            artifacts/FcMarket-Setup.exe*
+            artifacts/FcMarket.zip*
 
       - name: GitHub Release
         if: github.ref_type == 'tag'
@@ -93,5 +104,7 @@ jobs:
           name: ${{ github.ref_name }}
           generate_release_notes: true
           files: |
+            artifacts/FcMarket-Setup.exe
+            artifacts/FcMarket-Setup.exe.sha256
             artifacts/FcMarket.zip
             artifacts/FcMarket.zip.sha256

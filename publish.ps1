@@ -72,3 +72,15 @@ if (Test-Path $zip) { Remove-Item -Force $zip }
 Compress-Archive -Path (Join-Path $out "*") -DestinationPath $zip
 Write-Host "Paket hazır: $out"
 Write-Host "Zip: $zip"
+
+# Kurulum dosyası (Inno Setup 6): masaüstü/Başlat kısayolu, kaldırma kaydı. ISCC yoksa yalnız zip üretilir.
+$iscc = @((Get-Command ISCC.exe -ErrorAction SilentlyContinue).Source,
+    "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe",
+    "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe",
+    "$env:ProgramFiles\Inno Setup 6\ISCC.exe") | Where-Object { $_ -and (Test-Path $_) } | Select-Object -First 1
+if ($iscc) {
+    Invoke-Checked { & $iscc /Q "/DAppVersion=$Version" (Join-Path $PSScriptRoot "installer\FcMarket.iss") } "Kurulum dosyası"
+    Write-Host "Kurulum: $(Join-Path $PSScriptRoot 'artifacts\FcMarket-Setup.exe')"
+} else {
+    Write-Warning "Inno Setup 6 bulunamadı; FcMarket-Setup.exe üretilmedi (winget install JRSoftware.InnoSetup)."
+}

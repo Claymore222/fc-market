@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket.zip"><b>FcMarket.zip'i indir</b></a>
+  <a href="https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket-Setup.exe"><b>FcMarket-Setup.exe'yi indir</b></a>
   &nbsp;·&nbsp;
   <a href="#kurulum">Kurulum</a>
   &nbsp;·&nbsp;
@@ -71,20 +71,31 @@
 
 ## Kurulum
 
-**Gerekenler:** Windows 10/11, EA SPORTS FC 27, FC 27 Live Editor (export ve görseller için; kayıt
-okuma onsuz da çalışır). .NET ya da Python kurman **gerekmez**, ikisi de paketin içinde.
+**Gerekenler:** Windows 10/11, EA SPORTS FC 27, FC 27 Live Editor (export ve görseller için; kayıt okuma onsuz da
+çalışır). .NET ya da Python kurman **gerekmez**, ikisi de kurulumun içinde.
 
-1. **[FcMarket.zip](https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket.zip)**'i indir, bir klasöre aç (ör. `C:\FcMarket`).
-2. `FcMarket.exe`'yi çalıştır. İlk açılışta kariyer kayıtların bulunur ve listelenir.
-3. **Ayarlar → Live Editor klasörü**'nü seç, **Otomatik kariyer senkronu**'nu aç.
-4. Oyunu Live Editor ile başlat. Export seçtiğin sıklıkla (günlük, haftalık, aylık, 3 aylık) kendiliğinden alınır.
-5. Yüz, arma ve bayraklar için **Ayarlar → Görsel script'i**'ni kur, kariyer açıkken Live Editor'de bir kez çalıştır.
+1. **[FcMarket-Setup.exe](https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket-Setup.exe)** dosyasını indir ve çift tıkla.
+2. Windows "bilgisayarınızı korudu" uyarısı gösterirse **Ek bilgi** → **Yine de çalıştır** de. Uygulama imzasız
+   olduğu için bu uyarı yalnız ilk seferde çıkar. Yönetici izni sorulmaz.
+3. Kurulum bitince FC Market açılır; masaüstüne ve Başlat menüsüne kısayol eklenir. İlk açılışta kariyer kayıtların
+   bulunur ve listelenir.
+4. **Ayarlar → Live Editor klasörü**'nü seç, **Otomatik kariyer senkronu**'nu aç.
+5. Oyunu Live Editor ile başlat. Export seçtiğin sıklıkla (günlük, haftalık, aylık, 3 aylık) kendiliğinden alınır.
+6. Yüz, arma ve bayraklar için **Ayarlar → Görsel script'i**'ni kur, kariyer açıkken Live Editor'de bir kez çalıştır.
 
-**Güncelleme:** Yeni sürümün zip'ini aynı klasöre açıp üzerine yazman yeterli. Verilerin (`%LOCALAPPDATA%\FcMarket`, `C:\FCExport`)
-korunur.
+FC Market kendini `%LOCALAPPDATA%\Programs\FC Market` klasörüne kurar. İndirdiğin dosyayı silebilirsin.
 
-> Windows SmartScreen imzasız uygulama uyarısı verebilir: **Ek bilgi → Yine de çalıştır**. Kaynak kodun tamamı bu
-> repoda; her release GitHub Actions'ta bu koddan derlenir ve zip'in SHA-256 özeti release'te yayımlanır.
+**Güncelleme:** Yeni sürümün `FcMarket-Setup.exe`'sini çalıştırman yeterli. FC Market açıksa kurulum onu kapatır;
+verilerin (`%LOCALAPPDATA%\FcMarket`, `C:\FCExport`) korunur.
+
+**Kaldırmak için:** Ayarlar → Uygulamalar → Yüklü uygulamalar → FC Market → Kaldır. Kariyer verilerin ve
+ayarların silinmez; tamamen temizlemek istersen bu iki klasörü elle sil.
+
+**Kurulumsuz (taşınabilir):** [FcMarket.zip](https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket.zip)'i bir klasöre açıp `FcMarket.exe`'yi çalıştırabilirsin.
+
+> [!NOTE]
+> Kaynak kodun tamamı bu repoda. Her release GitHub Actions'ta bu koddan derlenir; dosyaların SHA-256 özetleri
+> release sayfasında yayımlanır.
 
 ## Nasıl çalışır
 
@@ -144,10 +155,10 @@ Günlük: `%LOCALAPPDATA%\FcMarket\desktop.log`. 5127 portu boş olmalı.
 powershell -ExecutionPolicy Bypass -File .\publish.ps1 -Version 0.1.0   # artifacts\FcMarket\FcMarket.exe + zip
 ```
 Paket çift tıkla açılır (repo gerekmez). .NET (self-contained) ve python.org'un embeddable Python'u (Pillow ile)
-`app\` altına gömülür; yalnız WebView2 gerekir. Derlemek için .NET 9 SDK, Node 20+ ve Python 3.14 (pip) gerekir.
+`app\` altına gömülür; yalnız WebView2 gerekir. Derlemek için .NET 9 SDK, Node 20+ ve Python 3.14 (pip) gerekir; kurulum dosyası için Inno Setup 6 (`winget install JRSoftware.InnoSetup`).
 
 `vX.Y.Z` tag'i push edilince [.github/workflows/release.yml](.github/workflows/release.yml) testleri çalıştırır,
-paketi bu sürümle derler ve `FcMarket.zip`'i (SHA-256 dosyasıyla) GitHub Release'e ekler. Kullanıcı verisi
+paketi bu sürümle derler; `FcMarket-Setup.exe` (Inno Setup, [installer/FcMarket.iss](installer/FcMarket.iss)) ve `FcMarket.zip`'i SHA-256 dosyalarıyla GitHub Release'e ekler. Kullanıcı verisi
 `%LOCALAPPDATA%\FcMarket` altında (app.db, `images\`, kayıt yedekleri, `settings.json`) ve yeni paket açıldığında
 korunur. `settings.json` (isteğe bağlı):
 ```json
@@ -183,6 +194,7 @@ tools/assets/             DDS → PNG (faces/, crests/, flags/)
 backend/FcMarket.Api/     ASP.NET Core 9 Minimal API (Dapper + Microsoft.Data.Sqlite), salt-okunur
 frontend/                 React + Vite + TypeScript
 desktop/                  WebView2 masaüstü kabuğu
+installer/                Inno Setup kurulum script'i (FcMarket-Setup.exe)
 config/field-map.json     kanonik alan → ham oyun alanı eşlemesi (+ etiketler)
 config/saveimport/        kayıt meta verisi (MIT kaynaklı, bkz. README)
 docs/                     PRODUCT-ROADMAP, data-dictionary, save-import, career-mods

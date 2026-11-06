@@ -4,7 +4,15 @@ FC 27 Career Mode için yerel kariyer yardımcısı (CMTracker benzeri): Live Ed
 Windows masaüstü penceresinde gösterir. Oyuna ve kayıt dosyasına hiçbir şey yazmaz.
 Durum ve yol haritası: [docs/PRODUCT-ROADMAP.md](docs/PRODUCT-ROADMAP.md).
 
-## Çalıştırma
+## İndir ve kullan
+
+1. [Releases](../../releases/latest) sayfasından `FcMarket-vX.Y.Z.zip`'i indir, istediğin klasöre aç (ör. `C:\FcMarket`).
+2. `FcMarket.exe`'yi çalıştır. .NET ya da Python kurmak gerekmez; ikisi de pakette. WebView2 Windows 11'de hazır gelir.
+3. Uygulamada **Ayarlar → Live Editor klasörü**'nü seç ve otomatik kariyer senkronunu aç.
+
+Verilerin `%LOCALAPPDATA%\FcMarket` ve `C:\FCExport` altında durur; yeni sürümü aynı klasöre açınca korunur.
+
+## Geliştirme
 
 **Windows masaüstü penceresi (WebView2):**
 ```powershell
@@ -23,8 +31,11 @@ Günlük: `%LOCALAPPDATA%\FcMarket\desktop.log`. 5127 portu boş olmalı.
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\publish.ps1 -Version 0.1.0   # artifacts\FcMarket\FcMarket.exe + zip
 ```
-Paket çift tıkla açılır (repo gerekmez); .NET 9 runtime, Python 3.14 (+ `pip install -r requirements.txt`, görseller için)
-ve WebView2 kurulu olmalı. Kullanıcı verisi `%LOCALAPPDATA%\FcMarket` altında (app.db, `images\`, kayıt yedekleri,
+Paket çift tıkla açılır (repo gerekmez). .NET (self-contained) ve python.org'un embeddable Python'u (Pillow ile)
+`app\` altına gömülür; yalnız WebView2 gerekir. Derlemek için .NET 9 SDK, Node 20+ ve Python 3.14 (pip) gerekir.
+
+**Release:** `vX.Y.Z` tag'i push edilince [.github/workflows/release.yml](.github/workflows/release.yml) testleri çalıştırır,
+paketi bu sürümle derler ve zip'i (SHA-256 dosyasıyla) GitHub Release'e ekler. Kullanıcı verisi `%LOCALAPPDATA%\FcMarket` altında (app.db, `images\`, kayıt yedekleri,
 `settings.json`) ve yeni paket açıldığında korunur. `settings.json` (isteğe bağlı):
 ```json
 { "exportDir": "C:\\FCExport", "python": "C:\\...\\python.exe" }

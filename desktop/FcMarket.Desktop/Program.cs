@@ -40,7 +40,9 @@ sealed record AppLayout(string Root, string ExportDir, string Python, string Api
     public static AppLayout? Packaged(out string problem)
     {
         var root = AppContext.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar);
-        var api = Path.Combine(root, "app", "api", "FcMarket.Api.dll");
+        // Release paketi API'yi kendi .NET'iyle (self-contained exe) taşır; eski paketler dll + kurulu .NET.
+        var api = Path.Combine(root, "app", "api", "FcMarket.Api.exe");
+        if (!File.Exists(api)) api = Path.ChangeExtension(api, ".dll");
         problem = "";
         if (!File.Exists(api)) { problem = $"Uygulama dosyaları eksik: {api}\nPaketi yeniden indirip açın."; return null; }
         Dictionary<string, string>? settings = null;
@@ -48,11 +50,17 @@ sealed record AppLayout(string Root, string ExportDir, string Python, string Api
         try { if (File.Exists(settingsPath)) settings = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(settingsPath).TrimStart('\uFEFF')); }
         catch (JsonException) { problem = $"Ayar dosyası okunamadı: {settingsPath}"; return null; }
         var exportDir = settings?.GetValueOrDefault("exportDir") ?? @"C:\FCExport";
-        var python = settings?.GetValueOrDefault("python") ?? FindPython();
+        var bundled = Path.Combine(root, "app", "python", "python.exe");
+        var python = settings?.GetValueOrDefault("python") ?? (File.Exists(bundled) ? bundled : FindPython());
         if (python is null) { problem = "Python 3.14 bulunamadı. python.org'dan kurun ya da settings.json'a \"python\" yolunu yazın."; return null; }
+        // Varsayılan export klasörü ilk açılışta kurulur (Lua klasör oluşturamaz); elle verilen klasör kullanıcınındır.
+        if (!settings?.ContainsKey("exportDir") ?? true)
+            foreach (var dir in ExportFolders) Directory.CreateDirectory(Path.Combine(exportDir, dir));
         if (!Directory.Exists(exportDir)) { problem = $"Export klasörü yok: {exportDir}\nKlasörü oluşturun ya da settings.json'a \"exportDir\" yazın."; return null; }
         return new AppLayout(root, exportDir, python, api, LocalData);
     }
+
+    static readonly string[] ExportFolders = ["", "assets", @"assets\heads", @"assets\crests", @"assets\flags", @"assets\playstyles", @"assets\trophies", @"assets\leagues"];
 
     /// <summary>PATH'teki gerçek python.exe (Microsoft Store kısayolu WindowsApps hariç), yoksa py başlatıcısı.</summary>
     static string? FindPython()
@@ -113,7 +121,8 @@ sealed class MainWindow : Form
         var info = new ProcessStartInfo(executable) { WorkingDirectory = root, UseShellExecute = false, CreateNoWindow = true, RedirectStandardOutput = true, RedirectStandardError = true };
         // ASP.NET loads appsettings.json relative to the content root (working directory).
         // The built API directory contains the copied configuration; repo root does not.
-        if (executable == "dotnet") info.WorkingDirectory = Path.GetDirectoryName(args[0])!;
+        var api = executable == "dotnet" || Path.GetFileName(executable).Equals("FcMarket.Api.exe", StringComparison.OrdinalIgnoreCase);
+        if (api) info.WorkingDirectory = Path.GetDirectoryName(executable == "dotnet" ? args[0] : executable)!;
         foreach (var arg in args) info.ArgumentList.Add(arg);
         info.Environment["FC_CAREER_DB"] = Path.Combine(exportDir, "fc_career.db");
         info.Environment["FC_EXPORT_DIR"] = exportDir;
@@ -134,7 +143,7 @@ sealed class MainWindow : Form
         info.Environment["Server__Host"] = "127.0.0.1";
         info.Environment["Server__Port"] = "5127";
         var process = new Process { StartInfo = info };
-        var component = executable == "dotnet" ? "api" : args.Contains("tools.assets") ? "assets" : "saveimport";
+        var component = api ? "api" : args.Contains("tools.assets") ? "assets" : "saveimport";
         WriteLog(component, "START " + Path.GetFileName(executable) + " " + string.Join(" ", args));
         DataReceivedEventHandler log = (_, e) => { if (e.Data != null) WriteLog(component, e.Data); };
         process.OutputDataReceived += log; process.ErrorDataReceived += log;
@@ -158,7 +167,8 @@ sealed class MainWindow : Form
             // Açılış içe aktarmayı beklemez: API son başarılı verilerle hemen açılır, izleyicinin ilk turu yeni ya da
             // değişen kayıtları arka planda aktarır (değişmeyenler atlanır). Sayfa /api/sync ile yeni veriyi kendisi alır.
             status.ShowStage("Veri servisi başlatılıyor…", "Kariyerler hazırlanıyor…");
-            var backend = StartChild("dotnet", layout.ApiDll);
+            var backend = layout.ApiDll.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)
+                ? StartChild(layout.ApiDll) : StartChild("dotnet", layout.ApiDll);
             StartWatcher();
             using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(2) };
             var ready = false;

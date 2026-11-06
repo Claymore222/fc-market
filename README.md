@@ -47,6 +47,7 @@
 | **Gençler, kupalar, maçlar, akış** | Altyapı ve gözlemci ağı, kazanılan kupalar, maç analizleri, iki tarih arasındaki değişimler (transferler, OVR artışları). |
 | **İzleme listesi ve karşılaştırma** | Oyuncuları not ve hedef fiyatla takibe al, yan yana karşılaştır. |
 | **Canlı senkron** | Oyunda kaydettiğin an veriler ~10 saniyede güncellenir. Uygulama ~1 saniyede açılır. |
+| **Kendini günceller** | Yeni sürüm çıkınca haber verir; *Şimdi güncelle* deyince indirir, doğrular, kurar ve yeniden açılır. |
 
 ## Ekran görüntüleri
 
@@ -85,11 +86,17 @@
 
 FC Market kendini `%LOCALAPPDATA%\Programs\FC Market` klasörüne kurar. İndirdiğin dosyayı silebilirsin.
 
-**Güncelleme:** Yeni sürümün `FcMarket-Setup.exe`'sini çalıştırman yeterli. FC Market açıksa kurulum onu kapatır;
-verilerin (`%LOCALAPPDATA%\FcMarket`, `C:\FCExport`) korunur.
+**Güncelleme:** FC Market açılışta ve 12 saatte bir yeni sürüm var mı diye bakar. Varsa bir bildirim çıkar:
+**Şimdi güncelle** deyince kurulum indirilir, SHA-256 ile doğrulanır, kurulur ve FC Market yeniden açılır. Sen onay
+vermeden hiçbir şey kurulmaz; elle denetlemek için **Ayarlar → Sürüm**. Verilerin (`%LOCALAPPDATA%\FcMarket`,
+`C:\FCExport`) güncellemede korunur.
 
-**Kaldırmak için:** Ayarlar → Uygulamalar → Yüklü uygulamalar → FC Market → Kaldır. Kariyer verilerin ve
-ayarların silinmez; tamamen temizlemek istersen bu iki klasörü elle sil.
+**Kaldırmak için:** Ayarlar → Uygulamalar → Yüklü uygulamalar → FC Market → Kaldır. Kaldırırken FC Market'in
+Live Editor'e koyduğu script'ler de kaldırılır (yedeklenerek; senin değiştirdiğin dosyalara dokunulmaz). Bir soru gelir:
+
+- **Verileri de sil → Evet:** kariyer veritabanı (geçmiş, gelişim grafikleri), kısa liste, planlar, ayarlar, görseller ve
+  kayıt yedekleri silinir. Oyunun kayıt dosyaları ve Live Editor'ün CSV export'ları korunur.
+- **Hayır:** verilerin kalır; FC Market'i yeniden kurunca kaldığın yerden devam eder.
 
 **Kurulumsuz (taşınabilir):** [FcMarket.zip](https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket.zip)'i bir klasöre açıp `FcMarket.exe`'yi çalıştırabilirsin.
 
@@ -112,8 +119,10 @@ Live Editor export'u (C:\FCExport) ───────────┘
 ## Güvenlik ve gizlilik
 
 - **Oyuna yazmaz.** Kayıt dosyaları yalnız kopyalanarak okunur; oyunun dosyasına dokunulmaz.
-- **İnternete çıkmaz.** Arayüz ve API yalnız `127.0.0.1`'de çalışır, dışarıdan erişilemez. Tek istisna: bir PlayStyle
-  rozeti ilk gerektiğinde EA'nın resmî adresinden indirilir ve SHA-256 ile doğrulanır. Hesap ya da kullanıcı verisi gönderilmez.
+- **Dışarıya veri göndermez.** Arayüz ve API yalnız `127.0.0.1`'de çalışır, dışarıdan erişilemez. İnternete yalnız iki
+  iş için çıkılır: GitHub'daki son sürüme bakmak (ve onay verirsen kurulumu indirmek) ve bir PlayStyle rozeti ilk
+  gerektiğinde EA'nın resmî adresinden indirmek. İndirilen her dosya SHA-256 ile doğrulanır. Hesap, kariyer ya da
+  kullanıcı verisi gönderilmez.
 - **Verilerin sende kalır:** `%LOCALAPPDATA%\FcMarket` (kısa liste, planlar, görseller, kayıt yedekleri) ve
   `C:\FCExport` (export'lar, kariyer veritabanı). Hangi verinin ne kadar yer kapladığını **Ayarlar → Veri ve depolama**'da görürsün.
 

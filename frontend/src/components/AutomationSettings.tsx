@@ -4,6 +4,7 @@ import { FolderOpen, RefreshCw, Settings2, X, Zap, Image } from 'lucide-react'
 import { isDesktop, onHostMessage, postHost, setAutomation, setExportSchedule, type AutomationStatus, type AutomationScript, type ExportSchedule } from '../lib/host'
 import { ThemePicker } from './ThemePicker'
 import { StorageSettings } from './StorageSettings'
+import { UpdateSettings } from './UpdateNotice'
 
 export const SCHEDULES: { id: ExportSchedule; label: string; detail: string }[] = [
   { id: 'daily', label: 'Günlük', detail: 'Her oyun günü hafif export, ay başında tam export. En çok takılan seçenek.' },
@@ -66,6 +67,7 @@ export function AutomationSettings({ onClose }: { onClose: () => void }) {
       <button className="btn" aria-label="Ayarları kapat" disabled={busy} onClick={onClose}><X size={18} /></button></header>
     <div className="automation-body">
       <ThemePicker />
+      <UpdateSettings />
       <StorageSettings />
       <h3 className="text-xs font-semibold text-gray-300">Otomasyon ve script’ler</h3>
       <p className="text-sm leading-relaxed text-gray-400">Live Editor kurulumunu seç, otomatik senkronu buradan yönet.</p>

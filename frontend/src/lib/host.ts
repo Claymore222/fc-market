@@ -5,6 +5,19 @@ export type HostMessage =
   | { type: 'saveAdded'; ok: boolean; cancelled?: boolean; file?: string; message?: string }
   | { type: 'automation'; ok: boolean; state?: AutomationStatus; message?: string }
   | { type: 'resumeCareer' }
+  | ({ type: 'update' } & UpdateStatus)
+
+/** Masaüstünün güncelleme durumu. disabled: geliştirme sürümü; canInstall: kurulumla gelmiş, indirip kurabilir. */
+export interface UpdateStatus {
+  current: string
+  state: 'idle' | 'disabled' | 'checking' | 'none' | 'available' | 'downloading' | 'installing' | 'error'
+  version?: string | null
+  notes?: string | null
+  page?: string | null
+  canInstall: boolean
+  progress: number
+  message?: string | null
+}
 
 export interface AutomationScript {
   id: 'export' | 'assets' | 'legacyAssets' | 'manualExport'
@@ -37,7 +50,8 @@ export const isDesktop = () => webview() !== undefined
 export const isCareerEntered = () => !isDesktop() || Boolean((window as unknown as { __fcmEntered?: boolean }).__fcmEntered)
 
 /** enterCareer: tam boy pencere; showLauncher: küçük dikey pencere; addSave: dosya seçtir ve içe aktar. */
-export function postHost(type: 'enterCareer' | 'showLauncher' | 'addSave' | 'automationStatus' | 'automationFolder') {
+export function postHost(type: 'enterCareer' | 'showLauncher' | 'addSave' | 'automationStatus' | 'automationFolder'
+  | 'updateStatus' | 'updateCheck' | 'updateInstall' | 'updateOpenPage') {
   webview()?.postMessage({ type })
 }
 

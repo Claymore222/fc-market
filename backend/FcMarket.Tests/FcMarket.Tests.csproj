@@ -22,6 +22,8 @@
     <Compile Include="../../desktop/FcMarket.Desktop/ScriptLogging.cs" Link="Desktop/ScriptLogging.cs" />
     <Compile Include="../../desktop/FcMarket.Desktop/AppLogs.cs" Link="Desktop/AppLogs.cs" />
     <Compile Include="../../desktop/FcMarket.Desktop/BrowserRecoveryPolicy.cs" Link="Desktop/BrowserRecoveryPolicy.cs" />
+    <Compile Include="../../desktop/FcMarket.Desktop/Updater.cs" Link="Desktop/Updater.cs" />
+    <Compile Include="../../desktop/FcMarket.Desktop/Uninstaller.cs" Link="Desktop/Uninstaller.cs" />
   </ItemGroup>
 
   <ItemGroup>

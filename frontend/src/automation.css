@@ -20,3 +20,16 @@
 .storage-list > li { display: flex; flex-direction: column; gap: 4px; }
 .storage-bar { height: 4px; border-radius: 4px; background: var(--fc-panel-raised); overflow: hidden; }
 .storage-bar > span { display: block; height: 100%; border-radius: 4px; background: var(--fc-accent); }
+
+.update-toast { position: fixed; right: 16px; bottom: 16px; z-index: 60; width: min(360px, calc(100vw - 32px)); padding: 14px 16px; border: 1px solid var(--fc-border-strong); border-radius: 12px; background: var(--fc-panel-raised); color: var(--fc-text); box-shadow: 0 12px 32px rgb(0 0 0 / .35); font-size: 13px; }
+.update-toast p { margin-top: 6px; color: var(--fc-muted); line-height: 1.5; }
+.update-toast-head { display: flex; align-items: center; gap: 8px; color: var(--fc-accent); }
+.update-toast-head strong { color: var(--fc-text); }
+.update-toast-close { margin-left: auto; padding: 4px; border-radius: 6px; color: var(--fc-muted); }
+.update-toast-close:hover { background: var(--fc-panel); color: var(--fc-text); }
+.update-toast-actions { display: flex; gap: 8px; margin-top: 12px; }
+.update-progress { height: 6px; margin-top: 10px; border-radius: 6px; background: var(--fc-panel); overflow: hidden; }
+.update-progress > span { display: block; height: 100%; background: var(--fc-accent); transition: width .2s; }
+@media (prefers-reduced-motion: reduce) { .update-progress > span { transition: none; } }
+/* Dar kariyer seçme penceresinde alttaki Ayarlar / Kayıt ekle butonlarını kapatmasın. */
+@media (max-width: 640px) { .update-toast { top: 12px; bottom: auto; right: 12px; width: calc(100vw - 24px); } }

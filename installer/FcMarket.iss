@@ -1,7 +1,9 @@
 ; FC Market kurulumu (Inno Setup 6). publish.ps1 önce artifacts\FcMarket'i üretir, sonra:
 ;   ISCC.exe /DAppVersion=0.2.3 installer\FcMarket.iss   →   artifacts\FcMarket-Setup.exe
 ; Kullanıcı başına kurulur (%LOCALAPPDATA%\Programs\FC Market): yönetici izni gerekmez, güncelleme aynı yere yazar.
-; Kullanıcı verisi (%LOCALAPPDATA%\FcMarket, C:\FCExport) kurulum klasörünün dışındadır; güncelleme ve kaldırma ona dokunmaz.
+; Kullanıcı verisi (%LOCALAPPDATA%\FcMarket, C:\FCExport) kurulum klasörünün dışındadır; güncelleme ona dokunmaz,
+; kaldırma yalnız kullanıcı "verileri de sil" derse FC Market'in ürettiklerini siler (FcMarket.exe --uninstall --purge).
+; Uygulama içinden güncelleme Setup'ı /SILENT /UPDATE ile çalıştırır; kurulum bitince uygulama yeniden açılır.
 
 #ifndef AppVersion
   #define AppVersion "0.0.0"
@@ -61,6 +63,8 @@ Name: "{autodesktop}\FC Market"; Filename: "{app}\FcMarket.exe"; Comment: "FC 27
 
 [Run]
 Filename: "{app}\FcMarket.exe"; Description: "FC Market'i şimdi aç"; Flags: nowait postinstall skipifsilent
+; Uygulama içinden güncelleme (/UPDATE): kurulum sessiz de olsa bitince uygulama yeniden açılır.
+Filename: "{app}\FcMarket.exe"; Flags: nowait; Check: IsUpdate
 
 [UninstallDelete]
 ; Çalışırken oluşan Python önbellekleri. Kullanıcı verisi (%LOCALAPPDATA%\FcMarket, C:\FCExport) korunur.
@@ -92,8 +96,41 @@ begin
   Result := '';
 end;
 
-function InitializeUninstall(): Boolean;
+function HasParam(Name: String): Boolean;
+var
+  I: Integer;
 begin
+  Result := False;
+  for I := 1 to ParamCount do
+    if CompareText(ParamStr(I), Name) = 0 then Result := True;
+end;
+
+function IsUpdate(): Boolean;
+begin
+  Result := HasParam('/UPDATE');
+end;
+
+// Kaldırma onaylandıktan sonra, dosyalar silinmeden önce: uygulama kapatılır, Live Editor'e koyduğumuz script'ler
+// kaldırılır (autorun'daki fc_export.lua yoksa oyunda çalışmaya devam ederdi) ve istenirse FC Market verileri silinir.
+// Sessiz kaldırmada veriler yalnız /PURGE ile silinir.
+procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+var
+  Purge: Boolean;
+  Args: String;
+  Code: Integer;
+begin
+  if CurUninstallStep <> usUninstall then Exit;
   StopFcMarket(ExpandConstant('{app}'));
-  Result := True;
+  Purge := HasParam('/PURGE');
+  if not UninstallSilent then
+    Purge := MsgBox('FC Market''in verileri de silinsin mi?' + #13#10 + #13#10 +
+      'Silinir: kariyer veritabanı (geçmiş ve gelişim grafikleri), kısa liste, transfer planları, ayarlar, ' +
+      'oyundan çıkarılan görseller ve kayıt yedekleri.' + #13#10 +
+      'Korunur: oyunun kayıt dosyaları ve Live Editor export''ları (C:\FCExport içindeki CSV''ler).' + #13#10 + #13#10 +
+      'Hayır dersen verilerin kalır; FC Market''i yeniden kurunca kaldığın yerden devam eder.',
+      mbConfirmation, MB_YESNO or MB_DEFBUTTON2) = IDYES;
+  Args := '--uninstall';
+  if Purge then Args := Args + ' --purge';
+  Exec(ExpandConstant('{app}\FcMarket.exe'), Args, '', SW_HIDE, ewWaitUntilTerminated, Code);
+  Log(Format('FC Market temizliği: %s, çıkış %d', [Args, Code]));
 end;

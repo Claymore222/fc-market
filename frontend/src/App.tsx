@@ -22,6 +22,7 @@ import { isCareerEntered, onHostMessage, postHost } from './lib/host'
 import { AlertTriangle } from 'lucide-react'
 import { gameDate } from './lib/format'
 import { AutomationSettings } from './components/AutomationSettings'
+import { UpdateBanner } from './components/UpdateNotice'
 import { hasOpenWarnings, ImportIssues, ImportWarnings } from './components/ImportIssues'
 import { Toaster } from './components/Toaster'
 
@@ -96,7 +97,8 @@ export function App() {
 
   if (!entered) {
     return <><LauncherPage saves={list} loading={saves.isPending} failed={saves.isError} current={career.key} onEnter={selectCareer} onSettings={() => setSettingsOpen(true)} />
-      {settingsOpen && <AutomationSettings onClose={() => setSettingsOpen(false)} />}</>
+      {settingsOpen && <AutomationSettings onClose={() => setSettingsOpen(false)} />}
+      <UpdateBanner /></>
   }
 
   return (
@@ -147,6 +149,7 @@ onRefresh={handleRefresh}
         </div>
       </div>
       {settingsOpen && <AutomationSettings onClose={() => setSettingsOpen(false)} />}
+      <UpdateBanner />
       <Toaster />
     </CareerContext.Provider>
   )

@@ -11,6 +11,14 @@ static class Program
     [STAThread]
     static void Main(string[] args)
     {
+        // Kaldırıcı çağırır (installer\FcMarket.iss): pencere açılmaz, LE script'leri (ve --purge ile verimiz) temizlenir.
+        if (args.Contains("--uninstall"))
+        {
+            var exportDir = AppLayout.ReadSettings()?.GetValueOrDefault("exportDir") ?? @"C:\FCExport";
+            var result = Uninstaller.Run(new AutomationManager(AppContext.BaseDirectory, AppLayout.LocalData, exportDirectory: exportDir),
+                AppLayout.LocalData, exportDir, args.Contains("--purge"));
+            Environment.Exit(result.Failed.Count == 0 ? 0 : 1);
+        }
         ApplicationConfiguration.Initialize();
         using var singleInstance = new Mutex(true, "Local\\FcMarket.Desktop", out var first);
         if (!first) { MessageBox.Show("FC Market zaten açık."); return; }
@@ -45,9 +53,9 @@ sealed record AppLayout(string Root, string ExportDir, string Python, string Api
         if (!File.Exists(api)) api = Path.ChangeExtension(api, ".dll");
         problem = "";
         if (!File.Exists(api)) { problem = $"Uygulama dosyaları eksik: {api}\nPaketi yeniden indirip açın."; return null; }
-        Dictionary<string, string>? settings = null;
+        Dictionary<string, string>? settings;
         var settingsPath = Path.Combine(LocalData, "settings.json");
-        try { if (File.Exists(settingsPath)) settings = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(settingsPath).TrimStart('\uFEFF')); }
+        try { settings = ReadSettings(throwOnError: true); }
         catch (JsonException) { problem = $"Ayar dosyası okunamadı: {settingsPath}"; return null; }
         var exportDir = settings?.GetValueOrDefault("exportDir") ?? @"C:\FCExport";
         var bundled = Path.Combine(root, "app", "python", "python.exe");
@@ -58,6 +66,13 @@ sealed record AppLayout(string Root, string ExportDir, string Python, string Api
             foreach (var dir in ExportFolders) Directory.CreateDirectory(Path.Combine(exportDir, dir));
         if (!Directory.Exists(exportDir)) { problem = $"Export klasörü yok: {exportDir}\nKlasörü oluşturun ya da settings.json'a \"exportDir\" yazın."; return null; }
         return new AppLayout(root, exportDir, python, api, LocalData);
+    }
+
+    public static Dictionary<string, string>? ReadSettings(bool throwOnError = false)
+    {
+        var path = Path.Combine(LocalData, "settings.json");
+        try { return File.Exists(path) ? JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(path).TrimStart('\uFEFF')) : null; }
+        catch (JsonException) when (!throwOnError) { return null; }
     }
 
     static readonly string[] ExportFolders = ["", "assets", @"assets\heads", @"assets\crests", @"assets\flags", @"assets\playstyles", @"assets\trophies", @"assets\leagues"];
@@ -92,6 +107,14 @@ sealed class MainWindow : Form
     readonly string addedSavesPath = Path.Combine(AppLayout.LocalData, "added-saves.json");
     Process? watcher;
     AutomationManager Automation => new(root, AppLayout.LocalData, exportDirectory: exportDir);
+    // Güncelleme: yalnız paket sürümünde. Kurulumla gelmişse (unins000.exe) indirip kurar, zip'te sayfayı açar.
+    readonly Updater updater = new(new HttpClient { Timeout = TimeSpan.FromMinutes(10) });
+    UpdateInfo? update;
+    string updateState = "idle";
+    int updateProgress;
+    string? updateError;
+    bool UpdatesEnabled => layout.DataDir is not null;
+    bool CanInstall => UpdatesEnabled && File.Exists(Path.Combine(root, "unins000.exe"));
     // Açılışta kariyer seçimi küçük dikey pencerede; kariyere girince tam boy.
     static readonly Size LauncherSize = new(460, 900), CareerSize = new(1600, 1040);
 
@@ -187,6 +210,7 @@ sealed class MainWindow : Form
             status.ShowStage("Ekran hazırlanıyor…");
             await browser.StartAsync();
             _ = WatchAssetsAsync();
+            _ = UpdateLoopAsync();
         }
         catch (OperationCanceledException) when (lifetime.IsCancellationRequested) { }
         catch (Exception ex)
@@ -245,6 +269,10 @@ sealed class MainWindow : Form
             case "addSave": await AddSaveAsync(); break;
             case "automationStatus": case "automationFolder": case "automationSet": case "automationSchedule":
                 AutomationMessage(type, message.RootElement); break;
+            case "updateStatus": if (updateState == "idle") await CheckUpdatesAsync(); else PostUpdate(); break;
+            case "updateCheck": await CheckUpdatesAsync(); break;
+            case "updateInstall": await InstallUpdateAsync(); break;
+            case "updateOpenPage": OpenReleasePage(); break;
         }
     }
 
@@ -273,6 +301,86 @@ sealed class MainWindow : Form
         }
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or JsonException or KeyNotFoundException or ArgumentException)
         { Post(new { type = "automation", ok = false, message = ex.Message }); }
+    }
+
+    void PostUpdate() => Post(new
+    {
+        type = "update", current = AppLayout.Version, state = updateState, version = update?.Version, notes = update?.Notes,
+        page = update?.PageUrl, canInstall = CanInstall && update?.SetupUrl is not null, progress = updateProgress, message = updateError,
+    });
+
+    async Task UpdateLoopAsync()
+    {
+        // Önceki güncellemenin indirdiği kurulum (~90 MB) kurulduktan sonra gereksiz.
+        try { var old = Path.Combine(Path.GetTempPath(), "FcMarket-update"); if (Directory.Exists(old)) Directory.Delete(old, true); }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException) { }
+        try
+        {
+            while (!lifetime.IsCancellationRequested)
+            {
+                if (updateState is "idle" or "none" or "error") await CheckUpdatesAsync();
+                await Task.Delay(TimeSpan.FromHours(12), lifetime.Token);
+            }
+        }
+        catch (OperationCanceledException) { }
+    }
+
+    async Task CheckUpdatesAsync()
+    {
+        if (!UpdatesEnabled) { updateState = "disabled"; PostUpdate(); return; }
+        if (updateState is "checking" or "downloading" or "installing") { PostUpdate(); return; }
+        updateState = "checking"; updateError = null; PostUpdate();
+        try
+        {
+            using var timeout = CancellationTokenSource.CreateLinkedTokenSource(lifetime.Token);
+            timeout.CancelAfter(TimeSpan.FromSeconds(20));
+            update = await updater.CheckAsync(AppLayout.Version, timeout.Token);
+            updateState = update is null ? "none" : "available";
+            if (update is not null) WriteLog("update", $"Yeni sürüm: {update.Version} (şu an {AppLayout.Version})");
+        }
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException or JsonException or InvalidOperationException or KeyNotFoundException)
+        {
+            if (lifetime.IsCancellationRequested) return;
+            updateState = "error"; updateError = "Güncelleme denetlenemedi. İnternet bağlantını kontrol et.";
+            WriteLog("update", "CHECK FAILED " + ex.Message);
+        }
+        PostUpdate();
+    }
+
+    async Task InstallUpdateAsync()
+    {
+        if (update is null || updateState is "downloading" or "installing") return;
+        if (!CanInstall || update.SetupUrl is null) { OpenReleasePage(); return; }
+        updateState = "downloading"; updateProgress = 0; updateError = null; PostUpdate();
+        try
+        {
+            var setup = await updater.DownloadAsync(update, Path.Combine(Path.GetTempPath(), "FcMarket-update"),
+                new Progress<int>(p => { updateProgress = p; PostUpdate(); }), lifetime.Token);
+            updateState = "installing"; PostUpdate();
+            WriteLog("update", $"INSTALL {update.Version} {setup}");
+            // Kurulum açık FC Market'i kapatmayı bekler; /UPDATE kurulum bitince uygulamayı yeniden açtırır (FcMarket.iss).
+            var info = new ProcessStartInfo(setup) { UseShellExecute = false };
+            foreach (var arg in new[] { "/SILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/UPDATE" }) info.ArgumentList.Add(arg);
+            Process.Start(info)?.Dispose();
+            await Task.Delay(500);
+            Close();
+        }
+        catch (OperationCanceledException) when (lifetime.IsCancellationRequested) { }
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException or IOException or InvalidDataException
+            or InvalidOperationException or UnauthorizedAccessException or System.ComponentModel.Win32Exception)
+        {
+            updateState = "error"; updateError = "Güncelleme indirilemedi: " + ex.Message;
+            WriteLog("update", "INSTALL FAILED " + ex);
+            PostUpdate();
+        }
+    }
+
+    void OpenReleasePage()
+    {
+        var url = update?.PageUrl ?? "https://github.com/Claymore222/fc-market/releases/latest";
+        if (!url.StartsWith("https://github.com/Claymore222/fc-market/", StringComparison.Ordinal)) return;
+        try { Process.Start(new ProcessStartInfo(url) { UseShellExecute = true })?.Dispose(); }
+        catch (System.ComponentModel.Win32Exception ex) { WriteLog("update", "OPEN FAILED " + ex.Message); }
     }
 
     void ResizeCentered(Size size, Size minimum)

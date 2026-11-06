@@ -71,26 +71,27 @@ jobs:
         shell: pwsh
         run: ./publish.ps1 -Version ${{ steps.version.outputs.value }}
 
+      # Sabit ad: README'deki releases/latest/download/FcMarket.zip bağlantısı her sürümde çalışır.
       - name: SHA-256
         shell: pwsh
         run: |
-          $zip = "artifacts/FcMarket-v${{ steps.version.outputs.value }}.zip"
-          $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLowerInvariant()
-          "$hash  FcMarket-v${{ steps.version.outputs.value }}.zip" | Set-Content -Encoding ascii "$zip.sha256"
+          Copy-Item "artifacts/FcMarket-v${{ steps.version.outputs.value }}.zip" artifacts/FcMarket.zip
+          $hash = (Get-FileHash artifacts/FcMarket.zip -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  FcMarket.zip" | Set-Content -Encoding ascii artifacts/FcMarket.zip.sha256
 
       - name: Paketi sakla (elle çalıştırma)
         if: github.ref_type != 'tag'
         uses: actions/upload-artifact@v4
         with:
           name: FcMarket
-          path: artifacts/FcMarket-v*.zip*
+          path: artifacts/FcMarket.zip*
 
       - name: GitHub Release
         if: github.ref_type == 'tag'
         uses: softprops/action-gh-release@v2
         with:
-          name: FC Market ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
           generate_release_notes: true
           files: |
-            artifacts/FcMarket-v${{ steps.version.outputs.value }}.zip
-            artifacts/FcMarket-v${{ steps.version.outputs.value }}.zip.sha256
+            artifacts/FcMarket.zip
+            artifacts/FcMarket.zip.sha256

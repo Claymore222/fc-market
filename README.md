@@ -1,19 +1,34 @@
-# FC Market
+<p align="center">
+  <img src="docs/images/logo.png" width="96" height="96" alt="FC Market logosu">
+</p>
 
-**EA SPORTS FC 27 Kariyer Modu için masaüstü kariyer yardımcısı.** Kariyer kaydını ve Live Editor export'unu okur:
-kadronu, ligini, bütçeni, 19.000+ oyuncuyu ve transfer ihtiyaçlarını tek pencerede gösterir. Her şey kendi
-bilgisayarında çalışır. **Oyuna ve kayıt dosyana hiçbir şey yazmaz.**
+<h1 align="center">FC Market</h1>
 
 <p align="center">
-  <img src="docs/screenshots/home.png" alt="Ana sayfa: kulübe genel bakış, takvim, sıradaki maç, lig sırası" width="900">
+  <b>EA SPORTS FC 27 Kariyer Modu</b> için masaüstü kariyer yardımcısı: kadron, ligin, bütçen, 19.000+ oyuncu ve
+  transfer ihtiyaçların tek pencerede. <b>Oyuna ve kayıt dosyana hiçbir şey yazmaz.</b>
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><b>⬇ Son sürümü indir</b></a> ·
-  <a href="#kurulum">Kurulum</a> ·
-  <a href="#neler-yapabilirsin">Özellikler</a> ·
-  <a href="#güvenlik-ve-gizlilik">Güvenlik</a> ·
-  <a href="#geliştirme">Geliştirme</a>
+  <a href="https://github.com/Claymore222/fc-market/releases/latest"><img src="https://img.shields.io/github/v/release/Claymore222/fc-market?label=s%C3%BCr%C3%BCm&color=4F8EDB" alt="Son sürüm"></a>
+  <a href="https://github.com/Claymore222/fc-market/releases"><img src="https://img.shields.io/github/downloads/Claymore222/fc-market/total?label=indirme&color=4F8EDB" alt="İndirme sayısı"></a>
+  <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-0F1624" alt="Windows 10 ve 11">
+  <img src="https://img.shields.io/badge/FC-27-0F1624" alt="EA SPORTS FC 27">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Claymore222/fc-market?label=lisans&color=0F1624" alt="Lisans"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket.zip"><b>FcMarket.zip'i indir</b></a>
+  &nbsp;·&nbsp;
+  <a href="#kurulum">Kurulum</a>
+  &nbsp;·&nbsp;
+  <a href="#neler-yapabilirsin">Özellikler</a>
+  &nbsp;·&nbsp;
+  <a href="#sık-sorulanlar">Sık sorulanlar</a>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/home.png" width="900" alt="Ana sayfa: kulübe genel bakış, takvim, sıradaki maç, lig sırası">
 </p>
 
 ---
@@ -59,13 +74,13 @@ bilgisayarında çalışır. **Oyuna ve kayıt dosyana hiçbir şey yazmaz.**
 **Gerekenler:** Windows 10/11, EA SPORTS FC 27, FC 27 Live Editor (export ve görseller için; kayıt
 okuma onsuz da çalışır). .NET ya da Python kurman **gerekmez**, ikisi de paketin içinde.
 
-1. [Releases](../../releases/latest) sayfasından `FcMarket-vX.Y.Z.zip`'i indir, bir klasöre aç (ör. `C:\FcMarket`).
+1. **[FcMarket.zip](https://github.com/Claymore222/fc-market/releases/latest/download/FcMarket.zip)**'i indir, bir klasöre aç (ör. `C:\FcMarket`).
 2. `FcMarket.exe`'yi çalıştır. İlk açılışta kariyer kayıtların bulunur ve listelenir.
 3. **Ayarlar → Live Editor klasörü**'nü seç, **Otomatik kariyer senkronu**'nu aç.
 4. Oyunu Live Editor ile başlat. Export seçtiğin sıklıkla (günlük, haftalık, aylık, 3 aylık) kendiliğinden alınır.
 5. Yüz, arma ve bayraklar için **Ayarlar → Görsel script'i**'ni kur, kariyer açıkken Live Editor'de bir kez çalıştır.
 
-**Güncelleme:** Yeni sürümün zip'ini aynı klasöre açman yeterli. Verilerin (`%LOCALAPPDATA%\FcMarket`, `C:\FCExport`)
+**Güncelleme:** Yeni sürümün zip'ini aynı klasöre açıp üzerine yazman yeterli. Verilerin (`%LOCALAPPDATA%\FcMarket`, `C:\FCExport`)
 korunur.
 
 > Windows SmartScreen imzasız uygulama uyarısı verebilir: **Ek bilgi → Yine de çalıştır**. Kaynak kodun tamamı bu
@@ -132,7 +147,7 @@ Paket çift tıkla açılır (repo gerekmez). .NET (self-contained) ve python.or
 `app\` altına gömülür; yalnız WebView2 gerekir. Derlemek için .NET 9 SDK, Node 20+ ve Python 3.14 (pip) gerekir.
 
 `vX.Y.Z` tag'i push edilince [.github/workflows/release.yml](.github/workflows/release.yml) testleri çalıştırır,
-paketi bu sürümle derler ve zip'i (SHA-256 dosyasıyla) GitHub Release'e ekler. Kullanıcı verisi
+paketi bu sürümle derler ve `FcMarket.zip`'i (SHA-256 dosyasıyla) GitHub Release'e ekler. Kullanıcı verisi
 `%LOCALAPPDATA%\FcMarket` altında (app.db, `images\`, kayıt yedekleri, `settings.json`) ve yeni paket açıldığında
 korunur. `settings.json` (isteğe bağlı):
 ```json
@@ -198,6 +213,6 @@ Git dışı yerel veriler: `faces/`, `crests/`, `flags/`, `app.db`, `scratch/`, 
 
 ---
 
-<sub>FC Market bağımsız, hayran yapımı bir araçtır; Electronic Arts ya da EA SPORTS ile bağlantılı değildir ve onlar
+<sub>Lisans: [Apache-2.0](LICENSE). FC Market bağımsız, hayran yapımı bir araçtır; Electronic Arts ya da EA SPORTS ile bağlantılı değildir ve onlar
 tarafından desteklenmez. EA SPORTS FC ve ilgili adlar Electronic Arts Inc.'in ticari markalarıdır. Oyun görselleri
 repoda ve pakette yer almaz.</sub>

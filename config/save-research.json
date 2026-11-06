@@ -1,0 +1,12 @@
+{
+  "status": "DOĞRULANACAK — yalnız araştırma, üretim alan eşlemesi değildir",
+  "sectionNames": ["advance", "sched", "objctvs", "manager", "history", "finance"],
+  "reference": {
+    "source": "https://cmtracker.net/alima19?ci=6ae1b64113da0aec07ed6e23",
+    "gameDate": "2030-07-17",
+    "teamId": 326,
+    "managerCounters": {"won": 148, "drawn": 39, "lost": 28, "goalsFor": 469, "goalsAgainst": 187}
+  },
+  "candidateWindowBytes": 256,
+  "notes": "Referans toplamların yakın konumlarda aranması yalnız aday üretir. Tek sayı eşleşmesi alan doğrulaması sayılmaz. Farklı kariyerlerde bu sayılar karşılaştırma amacı taşımaz."
+}

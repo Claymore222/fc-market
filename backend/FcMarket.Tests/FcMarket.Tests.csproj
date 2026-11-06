@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!-- .NET 9 runtime kurulu değilse en yeni major sürümde (ör. 10) çalışsın. -->
+    <RollForward>Major</RollForward>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+    <Compile Include="../../desktop/FcMarket.Desktop/AutomationManager.cs" Link="Desktop/AutomationManager.cs" />
+    <Compile Include="../../desktop/FcMarket.Desktop/ScriptLogging.cs" Link="Desktop/ScriptLogging.cs" />
+    <Compile Include="../../desktop/FcMarket.Desktop/AppLogs.cs" Link="Desktop/AppLogs.cs" />
+    <Compile Include="../../desktop/FcMarket.Desktop/BrowserRecoveryPolicy.cs" Link="Desktop/BrowserRecoveryPolicy.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FcMarket.Api\FcMarket.Api.csproj" />
+  </ItemGroup>
+
+</Project>

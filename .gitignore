@@ -1,0 +1,36 @@
+# Üretilen veri
+faces/
+crests/
+trophies/
+league-logos/
+flags/
+playstyle-icons/
+sample_export/
+*.db
+*.db-wal
+*.db-shm
+
+# .NET
+bin/
+obj/
+
+# Frontend
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+.DS_Store
+*.db.lock
+frontend/test-results/
+frontend/playwright-report/
+scratch/
+tools/saveimport/**/__pycache__/
+tools/saveimport/__pycache__/
+tools/assets/**/__pycache__/
+tools/__pycache__/
+exporter/tools/__pycache__/
+logs/
+watchlist.txt
+artifacts/
+ai-test/
+/test-results/

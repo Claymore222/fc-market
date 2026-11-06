@@ -1,0 +1,894 @@
+{
+  "$comment": "Kendi Türkçe özetlerimiz ve şematik 5x5 rol bölgeleri. Oyun kaydından ölçülen koşu/ısı haritası veya seçili taktik odağı değildir. Kodlar field-map.roles ile aynı; bilinmeyen kodlar için tahmin yapılmaz.",
+  "sources": [
+    "https://www.ea.com/games/ea-sports-fc/fc-25/news/pitch-notes-fc-25-fc-iq-deep-dive",
+    "https://www.ea.com/games/ea-sports-fc/fc-26/news/pitch-notes-fc26-gameplay-deep-dive"
+  ],
+  "roles": {
+    "1": {
+      "description": "Kale çizgisini korur; kurtarış ve güvenli top dağıtımına odaklanır.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "00000",
+            "01310"
+          ]
+        },
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "00000",
+            "01310"
+          ]
+        }
+      ]
+    },
+    "5": {
+      "description": "Kanadı savunurken hücuma genişlik ve pas desteği verir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "00001",
+            "00002",
+            "00003",
+            "00001"
+          ]
+        },
+        {
+          "name": "Çok yönlü",
+          "zones": [
+            "00000",
+            "00001",
+            "00002",
+            "00003",
+            "00001"
+          ]
+        }
+      ]
+    },
+    "6": {
+      "description": "Kanattan ileri çıkar, hücumda genişlik ve bindirme sağlar.",
+      "focuses": [
+        {
+          "name": "Destek",
+          "zones": [
+            "00000",
+            "00001",
+            "00002",
+            "00003",
+            "00001"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "00001",
+            "00002",
+            "00003",
+            "00001",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "9": {
+      "description": "Kanadı savunurken hücuma genişlik ve pas desteği verir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "10000",
+            "20000",
+            "30000",
+            "10000"
+          ]
+        },
+        {
+          "name": "Çok yönlü",
+          "zones": [
+            "00000",
+            "10000",
+            "20000",
+            "30000",
+            "10000"
+          ]
+        }
+      ]
+    },
+    "10": {
+      "description": "Kanattan ileri çıkar, hücumda genişlik ve bindirme sağlar.",
+      "focuses": [
+        {
+          "name": "Destek",
+          "zones": [
+            "00000",
+            "10000",
+            "20000",
+            "30000",
+            "10000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "10000",
+            "20000",
+            "30000",
+            "10000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "11": {
+      "description": "Savunma hattını korur ve merkezde rakibin ilerlemesini engeller.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "01310",
+            "00200"
+          ]
+        },
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "01310",
+            "00200"
+          ]
+        }
+      ]
+    },
+    "12": {
+      "description": "Rakibi önde karşılayarak müdahale ve top kazanmaya yönelir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "00000",
+            "00200",
+            "01310",
+            "00000"
+          ]
+        },
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "00200",
+            "01310"
+          ]
+        }
+      ]
+    },
+    "13": {
+      "description": "Savunmadan pasla çıkar; geriden oyun kurulumuna katılır.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "01310",
+            "00200"
+          ]
+        },
+        {
+          "name": "Oyun kurma",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "01310",
+            "00200"
+          ]
+        }
+      ]
+    },
+    "14": {
+      "description": "Savunma önünü korur, pas yollarını kapatır.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00200",
+            "01310",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00000",
+            "00000",
+            "00200",
+            "01310",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "16": {
+      "description": "Geriden pas bağlantıları kurarak takımın hücumunu başlatır.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00200",
+            "01310",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00000",
+            "00000",
+            "00200",
+            "01310",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "18": {
+      "description": "İki ceza sahası arasında hücuma ve savunmaya destek verir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "00200",
+            "01310",
+            "00200",
+            "00000"
+          ]
+        },
+        {
+          "name": "Top kazanma",
+          "zones": [
+            "00000",
+            "00200",
+            "01310",
+            "00200",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "20": {
+      "description": "Geriden pas bağlantıları kurarak takımın hücumunu başlatır.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "00200",
+            "01310",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "21": {
+      "description": "Pas bağlantıları ve yaratıcılığıyla merkezden hücumu yönlendirir.",
+      "focuses": [
+        {
+          "name": "Hücum",
+          "zones": [
+            "01310",
+            "00200",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00000",
+            "01310",
+            "00200",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "22": {
+      "description": "Merkez ile kanat arasındaki koridorda hücuma destek verir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "03020",
+            "02010",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "03020",
+            "02010",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Destek",
+          "zones": [
+            "00000",
+            "03020",
+            "02010",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "23": {
+      "description": "Çizgiye yakın oynayarak hücuma genişlik sağlar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00002",
+            "00003",
+            "00002",
+            "00001",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "00013",
+            "00003",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "25": {
+      "description": "Kanattan iç pas bağlantıları kurarak fırsat yaratır.",
+      "focuses": [
+        {
+          "name": "Hücum",
+          "zones": [
+            "00130",
+            "00001",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Oyun kurma",
+          "zones": [
+            "00120",
+            "00030",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "26": {
+      "description": "Kanattan merkeze kat ederek ceza sahasına koşular yapar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00120",
+            "00030",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "00130",
+            "00001",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00120",
+            "00030",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "27": {
+      "description": "Çizgiye yakın oynayarak hücuma genişlik sağlar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "20000",
+            "30000",
+            "20000",
+            "10000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "31000",
+            "30000",
+            "10000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "28": {
+      "description": "Kanat savunmasına ve topa sahip olmaya destek verir.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "10000",
+            "30000",
+            "20000"
+          ]
+        },
+        {
+          "name": "Destek",
+          "zones": [
+            "00000",
+            "10000",
+            "30000",
+            "20000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Oyun kurma",
+          "zones": [
+            "00000",
+            "10000",
+            "30000",
+            "20000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "30": {
+      "description": "Kanattan merkeze kat ederek ceza sahasına koşular yapar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "02100",
+            "03000",
+            "10000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "03100",
+            "10000",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "02100",
+            "03000",
+            "10000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "31": {
+      "description": "Pas bağlantıları ve yaratıcılığıyla merkezden hücumu yönlendirir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "01310",
+            "00200",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00000",
+            "01310",
+            "00200",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "32": {
+      "description": "Forvetin arkasından ceza sahasına girerek bitiriciliğe katkı sağlar.",
+      "focuses": [
+        {
+          "name": "Hücum",
+          "zones": [
+            "01310",
+            "00200",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "33": {
+      "description": "Merkez ile kanat arasındaki koridorda hücuma destek verir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00000",
+            "03020",
+            "02010",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "03020",
+            "02010",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00000",
+            "03020",
+            "02010",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "35": {
+      "description": "Çizgiye yakın oynayarak hücuma genişlik sağlar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00002",
+            "00003",
+            "00002",
+            "00001",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "00013",
+            "00003",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Çok yönlü",
+          "zones": [
+            "00013",
+            "00003",
+            "00002",
+            "00001",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "36": {
+      "description": "Kanattan merkeze kat ederek ceza sahasına koşular yapar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00120",
+            "00030",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "00130",
+            "00001",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "00120",
+            "00030",
+            "00001",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "38": {
+      "description": "Çizgiye yakın oynayarak hücuma genişlik sağlar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "20000",
+            "30000",
+            "20000",
+            "10000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "31000",
+            "30000",
+            "10000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Çok yönlü",
+          "zones": [
+            "31000",
+            "30000",
+            "20000",
+            "10000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "39": {
+      "description": "Kanattan merkeze kat ederek ceza sahasına koşular yapar.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "02100",
+            "03000",
+            "10000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "03100",
+            "10000",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Gezgin",
+          "zones": [
+            "02100",
+            "03000",
+            "10000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "42": {
+      "description": "Savunmanın arkasındaki boşlukları ve ceza sahası fırsatlarını arar.",
+      "focuses": [
+        {
+          "name": "Hücum",
+          "zones": [
+            "01310",
+            "00200",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Çok yönlü",
+          "zones": [
+            "01310",
+            "00200",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "43": {
+      "description": "Gerilere gelerek orta sahayla bağlantı kurar ve alan açar.",
+      "focuses": [
+        {
+          "name": "Oyun kurma",
+          "zones": [
+            "00100",
+            "01310",
+            "00200",
+            "00000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "01310",
+            "00200",
+            "00000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "45": {
+      "description": "Geriden oyunda pas seçeneği olur; savunurken çizgide kalır.",
+      "focuses": [
+        {
+          "name": "Oyun kurma",
+          "zones": [
+            "00000",
+            "00000",
+            "00000",
+            "00000",
+            "01310"
+          ]
+        }
+      ]
+    },
+    "47": {
+      "description": "Top takımındayken kanattan yüksek merkez bölgelerine katılır.",
+      "focuses": [
+        {
+          "name": "Oyun kurma",
+          "zones": [
+            "00000",
+            "01000",
+            "03000",
+            "20000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Hücum",
+          "zones": [
+            "01000",
+            "03000",
+            "20000",
+            "00000",
+            "00000"
+          ]
+        }
+      ]
+    },
+    "48": {
+      "description": "Kanada açılarak beklerin bıraktığı bölgeleri kapatır.",
+      "focuses": [
+        {
+          "name": "Savunma",
+          "zones": [
+            "00000",
+            "00000",
+            "10000",
+            "20000",
+            "30000"
+          ]
+        },
+        {
+          "name": "Agresif",
+          "zones": [
+            "10000",
+            "20000",
+            "30000",
+            "10000",
+            "00000"
+          ]
+        },
+        {
+          "name": "Destek",
+          "zones": [
+            "00000",
+            "10000",
+            "20000",
+            "30000",
+            "10000"
+          ]
+        }
+      ]
+    },
+    "49": {
+      "description": "Ön liberodan ileri koşular yapar; savunmaya dönüşü gecikebilir.",
+      "focuses": [
+        {
+          "name": "Dengeli",
+          "zones": [
+            "00200",
+            "00300",
+            "00200",
+            "00100",
+            "00000"
+          ]
+        }
+      ]
+    }
+  }
+}

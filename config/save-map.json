@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "format": "FC27-FBCHUNKS-Zstandard-T3DB-v8",
+  "comparison": {
+    "players": ["playerid"],
+    "teams": ["teamid"],
+    "teamplayerlinks": ["artificialkey"]
+  },
+  "identity": {
+    "table": "agents",
+    "match": {"firstname": "Live", "surname": "Editor", "agentid": 499999},
+    "uid": "commonname"
+  },
+  "header": {"anchorHex": "424e5259000000024c544c4501", "teamOffset": 13, "dateOffset": 33, "yearBase": 2000, "titleOffset": 18, "titleLength": 64, "status": "DOĞRULANACAK"},
+  "merge": {
+    "defaultTableSource": "save",
+    "exportOnlyTables": ["player_names", "nations", "player_stats", "prevcompetitionstats"],
+    "exportMetadata": ["transfer_budget", "wage_budget", "user_teamid", "user_team_name"],
+    "staticTables": ["nations"],
+    "nameTable": "player_names",
+    "nameKey": "playerid"
+  },
+  "bnry": {
+    "seasonHistory": {"status": "DOĞRULANACAK", "headerBytes": 49, "recordTail": "two marker1/u32-length/UTF8 names", "evidence": "17.07.2030 CMTracker 4 seasons; 10 local copies"},
+    "financeCategories": {"status": "DOĞRULANACAK", "anchor": "mnft", "offset": 11, "count": 23, "recordBytes": 8, "fields": "u32 income,u32 expense", "evidence": "17.07.2030 EUR 43432480 income / 48687237 expense matches CMTracker USD"},
+    "careerTransfers": {"status": "DOĞRULANDI", "worldRecordBytes": 31, "worldFields": "0101,u32 fee,u32 date,u32 to_teamid,u32 playerid,u32 seq,u32 from_teamid,u32 wage,u8 flag,u32 clause", "clubRingOffsetBeforeBudget": -325, "clubRingSlots": 10, "clubRingRecordBytes": 25, "evidence": "11 save copies across 4 careers (2026/27, 2029/30, 2030/31)"}
+  },
+  "notes": "DB field names/ranges: config/saveimport. BNRY discoveries require three-date validation and DOĞRULANACAK documentation."
+}

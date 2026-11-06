@@ -1,0 +1,17 @@
+{
+  "version": "1",
+  "maxBuys": 6,
+  "candidatesPerPosition": 30,
+  "rotationWeight": 0.5,
+  "gapPoints": 10,
+  "minGain": 1,
+  "resolveBonus": 5,
+  "rotationHeadroom": 6,
+  "dropPenalty": 1,
+  "closeChecks": 8,
+  "goals": {
+    "low": { "costWeight": 20, "needs": ["urgent", "window"], "mustClose": true },
+    "balanced": { "costWeight": 4, "needs": ["urgent", "window", "next-season"] },
+    "high": { "costWeight": 1, "needs": ["urgent", "window", "next-season"] }
+  }
+}

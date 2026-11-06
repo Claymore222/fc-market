@@ -1,0 +1,1688 @@
+{
+  "gBTf": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "iZmr": {
+    "TsLM": {
+      "name": "itemid",
+      "rangelow": 300000
+    }
+  },
+  "ngsH": {
+    "TsLM": {
+      "name": "itemid",
+      "rangelow": 300000
+    }
+  },
+  "qsWt": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    },
+    "DcmT": {
+      "name": "ballremapid",
+      "rangelow": -1
+    }
+  },
+  "rIsB": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "wDHM": {
+      "name": "previousteamid",
+      "rangelow": -1
+    }
+  },
+  "tfLS": {
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    }
+  },
+  "IrZL": {
+    "FgwP": {
+      "name": "buyingteamid",
+      "rangelow": -1
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "FYuR": {
+      "name": "sellingteamid",
+      "rangelow": -1
+    },
+    "KShP": {
+      "name": "transferdate",
+      "rangelow": "0"
+    }
+  },
+  "LbKk": {
+    "fmFo": {
+      "name": "teamid1",
+      "rangelow": -1
+    },
+    "afAW": {
+      "name": "teamid2",
+      "rangelow": -1
+    },
+    "mjQB": {
+      "name": "team2intensity",
+      "rangelow": "1"
+    },
+    "pkPy": {
+      "name": "team1intensity",
+      "rangelow": "1"
+    }
+  },
+  "Odrk": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "OIcD": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "SizI": {
+    "ZBjI": {
+      "name": "tier",
+      "rangelow": 0
+    },
+    "DQZu": {
+      "name": "primarycategoryid",
+      "rangelow": "0"
+    },
+    "GuLi": {
+      "name": "secondarycategoryid",
+      "rangelow": "0"
+    },
+    "yBnd": {
+      "name": "mode",
+      "rangelow": "0"
+    }
+  },
+  "SWFH": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    }
+  },
+  "fMpR": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "fggG": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "gzqh": {
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    }
+  },
+  "idNB": {
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "nhXl": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    }
+  },
+  "nrFl": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "qwYG": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "FMpz": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    },
+    "rIaU": {
+      "name": "g5subsonbench",
+      "rangelow": "0"
+    },
+    "IJaP": {
+      "name": "g4subsonbench",
+      "rangelow": "0"
+    },
+    "MCmI": {
+      "name": "hastrophy",
+      "rangelow": "0"
+    }
+  },
+  "ImNE": {
+    "Ibup": {
+      "name": "femaleteamid",
+      "rangelow": -1
+    },
+    "QmlU": {
+      "name": "maleteamid",
+      "rangelow": -1
+    }
+  },
+  "Knen": {
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "MsTi": {
+    "aSGN": {
+      "name": "refereekit",
+      "rangelow": -1
+    }
+  },
+  "QYeR": {
+    "KbVA": {
+      "name": "hometeamid",
+      "rangelow": -1
+    },
+    "fwCQ": {
+      "name": "stadiumid",
+      "rangelow": -1
+    }
+  },
+  "QMqB": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    }
+  },
+  "UlaA": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "brHl": {
+    "qljg": {
+      "name": "teamtechid",
+      "rangelow": -1
+    }
+  },
+  "cMPf": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "mMQM": {
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    },
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    }
+  },
+  "uvKl": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    }
+  },
+  "vGSz": {
+    "JMld": {
+      "name": "artificialkey",
+      "rangelow": -1
+    },
+    "qvmK": {
+      "name": "contractvaliduntil",
+      "rangelow": 2000
+    },
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "pSzm": {
+      "name": "releaseclause",
+      "rangelow": 0
+    },
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    },
+    "cmGX": {
+      "name": "wage",
+      "rangelow": 0
+    },
+    "rnxu": {
+      "name": "role9",
+      "rangelow": "0"
+    },
+    "YsBk": {
+      "name": "role8",
+      "rangelow": "0"
+    },
+    "zUsn": {
+      "name": "role6",
+      "rangelow": "0"
+    },
+    "MPct": {
+      "name": "role7",
+      "rangelow": "0"
+    },
+    "OwTX": {
+      "name": "growthprofile",
+      "rangelow": "0"
+    }
+  },
+  "CZUM": {
+    "qvmK": {
+      "name": "contractvaliduntil",
+      "rangelow": 2000
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "pSzm": {
+      "name": "releaseclause",
+      "rangelow": 0
+    },
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    },
+    "cmGX": {
+      "name": "wage",
+      "rangelow": 0
+    },
+    "rnxu": {
+      "name": "role9",
+      "rangelow": "0"
+    },
+    "YsBk": {
+      "name": "role8",
+      "rangelow": "0"
+    },
+    "zUsn": {
+      "name": "role6",
+      "rangelow": "0"
+    },
+    "MPct": {
+      "name": "role7",
+      "rangelow": "0"
+    },
+    "OwTX": {
+      "name": "growthprofile",
+      "rangelow": "0"
+    }
+  },
+  "CxJp": {
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "GOVn": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "HvYq": {
+    "qvmK": {
+      "name": "contractvaliduntil",
+      "rangelow": 2000
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "pSzm": {
+      "name": "releaseclause",
+      "rangelow": 0
+    },
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    },
+    "cmGX": {
+      "name": "wage",
+      "rangelow": 0
+    },
+    "rnxu": {
+      "name": "role9",
+      "rangelow": "0"
+    },
+    "YsBk": {
+      "name": "role8",
+      "rangelow": "0"
+    },
+    "zUsn": {
+      "name": "role6",
+      "rangelow": "0"
+    },
+    "MPct": {
+      "name": "role7",
+      "rangelow": "0"
+    },
+    "OwTX": {
+      "name": "growthprofile",
+      "rangelow": "0"
+    }
+  },
+  "JOhL": {
+    "qvmK": {
+      "name": "contractvaliduntil",
+      "rangelow": 2000
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "pSzm": {
+      "name": "releaseclause",
+      "rangelow": 0
+    },
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    },
+    "cmGX": {
+      "name": "wage",
+      "rangelow": 0
+    },
+    "rnxu": {
+      "name": "role9",
+      "rangelow": "0"
+    },
+    "YsBk": {
+      "name": "role8",
+      "rangelow": "0"
+    },
+    "zUsn": {
+      "name": "role6",
+      "rangelow": "0"
+    },
+    "MPct": {
+      "name": "role7",
+      "rangelow": "0"
+    },
+    "OwTX": {
+      "name": "growthprofile",
+      "rangelow": "0"
+    }
+  },
+  "MytH": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "RnPg": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "VHaB": {
+    "entq": {
+      "name": "awayteamid",
+      "rangelow": -1
+    },
+    "KbVA": {
+      "name": "hometeamid",
+      "rangelow": -1
+    }
+  },
+  "ZrAO": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "GlCc": {
+      "name": "teamidloanedfrom",
+      "rangelow": -1
+    },
+    "ujHR": {
+      "name": "futureoptiontobuy",
+      "rangelow": "0"
+    }
+  },
+  "kISL": {
+    "fwCQ": {
+      "name": "stadiumid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "lyxL": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "mDGw": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "nVuT": {
+    "fwCQ": {
+      "name": "stadiumid",
+      "rangelow": -1
+    }
+  },
+  "nQVU": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    }
+  },
+  "onMQ": {
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    }
+  },
+  "qmil": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "ySyc": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "AGmV": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "DdMn": {
+    "TsLM": {
+      "name": "itemid",
+      "rangelow": 300000
+    }
+  },
+  "GdtI": {
+    "qljg": {
+      "name": "teamtechid",
+      "rangelow": -1
+    }
+  },
+  "RrqT": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "TWRE": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    }
+  },
+  "XhKr": {
+    "TsLM": {
+      "name": "itemid",
+      "rangelow": 300000
+    }
+  },
+  "Zswx": {
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    }
+  },
+  "apoo": {
+    "rkcN": {
+      "name": "preferredposition5",
+      "rangelow": -1
+    },
+    "GdFb": {
+      "name": "preferredposition6",
+      "rangelow": -1
+    },
+    "VeVh": {
+      "name": "preferredposition7",
+      "rangelow": -1
+    }
+  },
+  "amvY": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "bneD": {
+    "FuiB": {
+      "name": "nameid",
+      "rangelow": 46000
+    }
+  },
+  "bqIi": {
+    "qvmK": {
+      "name": "contractvaliduntil",
+      "rangelow": 2000
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    },
+    "FWgd": {
+      "name": "previousteamid1",
+      "rangelow": -1
+    },
+    "EPJb": {
+      "name": "previousteamid2",
+      "rangelow": -1
+    },
+    "HMZV": {
+      "name": "previousteamid3",
+      "rangelow": -1
+    },
+    "pSzm": {
+      "name": "releaseclause",
+      "rangelow": 0
+    },
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    },
+    "cmGX": {
+      "name": "wage",
+      "rangelow": 0
+    },
+    "rnxu": {
+      "name": "role9",
+      "rangelow": "0"
+    },
+    "YsBk": {
+      "name": "role8",
+      "rangelow": "0"
+    },
+    "zUsn": {
+      "name": "role6",
+      "rangelow": "0"
+    },
+    "MPct": {
+      "name": "role7",
+      "rangelow": "0"
+    },
+    "OwTX": {
+      "name": "growthprofile",
+      "rangelow": "0"
+    }
+  },
+  "eqXx": {
+    "wZAv": {
+      "name": "skincomplexion",
+      "rangelow": 0
+    },
+    "ejir": {
+      "name": "skintonecode",
+      "rangelow": 0
+    }
+  },
+  "ijbM": {
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    }
+  },
+  "pRBh": {
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "qdZF": {
+    "aQrQ": {
+      "name": "leagueid",
+      "rangelow": -1
+    },
+    "PSlV": {
+      "name": "prevleagueid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "DFeB": {
+    "EhVu": {
+      "name": "emotional_teamid",
+      "rangelow": -1
+    },
+    "ykFq": {
+      "name": "playerid",
+      "rangelow": -1
+    }
+  },
+  "EInh": {
+    "TsLM": {
+      "name": "itemid",
+      "rangelow": 300000
+    }
+  },
+  "FlJM": {
+    "pxes": {
+      "name": "ballid",
+      "rangelow": -1
+    },
+    "mCXg": {
+      "name": "teamid",
+      "rangelow": -1
+    }
+  },
+  "IosO": {
+    "fmFo": {
+      "name": "teamid1",
+      "rangelow": -1
+    },
+    "afAW": {
+      "name": "teamid2",
+      "rangelow": -1
+    }
+  },
+  "Vmkr": {
+    "TSDz": {
+      "name": "awayleagueid",
+      "rangelow": -1
+    },
+    "entq": {
+      "name": "awayteamid",
+      "rangelow": -1
+    },
+    "qKND": {
+      "name": "homeleagueid",
+      "rangelow": -1
+    },
+    "KbVA": {
+      "name": "hometeamid",
+      "rangelow": -1
+    },
+    "fwCQ": {
+      "name": "stadiumid",
+      "rangelow": -1
+    }
+  },
+  "bFKF": {
+    "axuK": {
+      "name": "molesweight1",
+      "rangelow": "0"
+    },
+    "hsCD": {
+      "name": "molesweight5",
+      "rangelow": "0"
+    },
+    "HvlV": {
+      "name": "freckles0",
+      "rangelow": "0"
+    },
+    "MGBc": {
+      "name": "freckles4",
+      "rangelow": "0"
+    },
+    "YHSO": {
+      "name": "moles5",
+      "rangelow": "0"
+    },
+    "baCr": {
+      "name": "moles1",
+      "rangelow": "0"
+    },
+    "fRlp": {
+      "name": "frecklesweight3",
+      "rangelow": "0"
+    },
+    "kYRM": {
+      "name": "frecklesweight7",
+      "rangelow": "0"
+    },
+    "ohSp": {
+      "name": "moles0",
+      "rangelow": "0"
+    },
+    "rEig": {
+      "name": "moles4",
+      "rangelow": "0"
+    },
+    "vbVW": {
+      "name": "frecklesweight6",
+      "rangelow": "0"
+    },
+    "AKpf": {
+      "name": "frecklesweight2",
+      "rangelow": "0"
+    },
+    "DNFe": {
+      "name": "freckles5",
+      "rangelow": "0"
+    },
+    "IspD": {
+      "name": "freckles1",
+      "rangelow": "0"
+    },
+    "ivGt": {
+      "name": "molesweight4",
+      "rangelow": "0"
+    },
+    "pqyU": {
+      "name": "molesweight0",
+      "rangelow": "0"
+    },
+    "XoTA": {
+      "name": "molesweight2",
+      "rangelow": "0"
+    },
+    "cBzJ": {
+      "name": "molesweight6",
+      "rangelow": "0"
+    },
+    "eIgP": {
+      "name": "frecklesweight0",
+      "rangelow": "0"
+    },
+    "lhoq": {
+      "name": "frecklesweight4",
+      "rangelow": "0"
+    },
+    "pyPo": {
+      "name": "moles6",
+      "rangelow": "0"
+    },
+    "qjbN": {
+      "name": "moles2",
+      "rangelow": "0"
+    },
+    "CCIT": {
+      "name": "freckles3",
+      "rangelow": "0"
+    },
+    "JzwK": {
+      "name": "freckles7",
+      "rangelow": "0"
+    },
+    "SEgA": {
+      "name": "freckles6",
+      "rangelow": "0"
+    },
+    "ZBsd": {
+      "name": "freckles2",
+      "rangelow": "0"
+    },
+    "aiYo": {
+      "name": "frecklesweight5",
+      "rangelow": "0"
+    },
+    "hDQh": {
+      "name": "frecklesweight1",
+      "rangelow": "0"
+    },
+    "loXX": {
+      "name": "moles3",
+      "rangelow": "0"
+    },
+    "mxLe": {
+      "name": "moles7",
+      "rangelow": "0"
+    },
+    "zCjL": {
+      "name": "molesweight7",
+      "rangelow": "0"
+    },
+    "EjDi": {
+      "name": "molesweight3",
+      "rangelow": "0"
+    }
+  },
+  "AolY": {
+    "ElWc": {
+      "name": "perktier",
+      "rangelow": "0"
+    }
+  },
+  "YNjB": {
+    "gHTv": {
+      "name": "perk_2_tier",
+      "rangelow": "-1"
+    },
+    "pfKo": {
+      "name": "perk_0_tier",
+      "rangelow": "-1"
+    },
+    "GXtd": {
+      "name": "perk_1_tier",
+      "rangelow": "-1"
+    }
+  },
+  "gtgp": {
+    "axuK": {
+      "name": "molesweight1",
+      "rangelow": "0"
+    },
+    "hsCD": {
+      "name": "molesweight5",
+      "rangelow": "0"
+    },
+    "HvlV": {
+      "name": "freckles0",
+      "rangelow": "0"
+    },
+    "MGBc": {
+      "name": "freckles4",
+      "rangelow": "0"
+    },
+    "YHSO": {
+      "name": "moles5",
+      "rangelow": "0"
+    },
+    "baCr": {
+      "name": "moles1",
+      "rangelow": "0"
+    },
+    "fRlp": {
+      "name": "frecklesweight3",
+      "rangelow": "0"
+    },
+    "kYRM": {
+      "name": "frecklesweight7",
+      "rangelow": "0"
+    },
+    "ohSp": {
+      "name": "moles0",
+      "rangelow": "0"
+    },
+    "rEig": {
+      "name": "moles4",
+      "rangelow": "0"
+    },
+    "vbVW": {
+      "name": "frecklesweight6",
+      "rangelow": "0"
+    },
+    "AKpf": {
+      "name": "frecklesweight2",
+      "rangelow": "0"
+    },
+    "DNFe": {
+      "name": "freckles5",
+      "rangelow": "0"
+    },
+    "IspD": {
+      "name": "freckles1",
+      "rangelow": "0"
+    },
+    "ivGt": {
+      "name": "molesweight4",
+      "rangelow": "0"
+    },
+    "pqyU": {
+      "name": "molesweight0",
+      "rangelow": "0"
+    },
+    "XoTA": {
+      "name": "molesweight2",
+      "rangelow": "0"
+    },
+    "cBzJ": {
+      "name": "molesweight6",
+      "rangelow": "0"
+    },
+    "eIgP": {
+      "name": "frecklesweight0",
+      "rangelow": "0"
+    },
+    "lhoq": {
+      "name": "frecklesweight4",
+      "rangelow": "0"
+    },
+    "pyPo": {
+      "name": "moles6",
+      "rangelow": "0"
+    },
+    "qjbN": {
+      "name": "moles2",
+      "rangelow": "0"
+    },
+    "CCIT": {
+      "name": "freckles3",
+      "rangelow": "0"
+    },
+    "JzwK": {
+      "name": "freckles7",
+      "rangelow": "0"
+    },
+    "SEgA": {
+      "name": "freckles6",
+      "rangelow": "0"
+    },
+    "ZBsd": {
+      "name": "freckles2",
+      "rangelow": "0"
+    },
+    "aiYo": {
+      "name": "frecklesweight5",
+      "rangelow": "0"
+    },
+    "hDQh": {
+      "name": "frecklesweight1",
+      "rangelow": "0"
+    },
+    "loXX": {
+      "name": "moles3",
+      "rangelow": "0"
+    },
+    "mxLe": {
+      "name": "moles7",
+      "rangelow": "0"
+    },
+    "zCjL": {
+      "name": "molesweight7",
+      "rangelow": "0"
+    },
+    "EjDi": {
+      "name": "molesweight3",
+      "rangelow": "0"
+    }
+  },
+  "dRCR": {
+    "DPsy": {
+      "name": "ampcampaignid2",
+      "rangelow": "0"
+    },
+    "DIuE": {
+      "name": "amptierid2",
+      "rangelow": "0"
+    },
+    "MEtf": {
+      "name": "ampassetid1",
+      "rangelow": "0"
+    },
+    "VFrb": {
+      "name": "ampdefid1",
+      "rangelow": "0"
+    },
+    "cUww": {
+      "name": "ampcampaignid3",
+      "rangelow": "0"
+    },
+    "cDyG": {
+      "name": "amptierid3",
+      "rangelow": "0"
+    },
+    "CWRg": {
+      "name": "ampcampaignid1",
+      "rangelow": "0"
+    },
+    "CBri": {
+      "name": "amptierid1",
+      "rangelow": "0"
+    },
+    "LrWT": {
+      "name": "ampdefid3",
+      "rangelow": "0"
+    },
+    "JNoB": {
+      "name": "ampassetid2",
+      "rangelow": "0"
+    },
+    "SOkv": {
+      "name": "ampassetid3",
+      "rangelow": "0"
+    },
+    "QwSd": {
+      "name": "ampdefid2",
+      "rangelow": "0"
+    }
+  },
+  "fhLs": {
+    "axuK": {
+      "name": "molesweight1",
+      "rangelow": "0"
+    },
+    "hsCD": {
+      "name": "molesweight5",
+      "rangelow": "0"
+    },
+    "HvlV": {
+      "name": "freckles0",
+      "rangelow": "0"
+    },
+    "MGBc": {
+      "name": "freckles4",
+      "rangelow": "0"
+    },
+    "YHSO": {
+      "name": "moles5",
+      "rangelow": "0"
+    },
+    "baCr": {
+      "name": "moles1",
+      "rangelow": "0"
+    },
+    "fRlp": {
+      "name": "frecklesweight3",
+      "rangelow": "0"
+    },
+    "kYRM": {
+      "name": "frecklesweight7",
+      "rangelow": "0"
+    },
+    "ohSp": {
+      "name": "moles0",
+      "rangelow": "0"
+    },
+    "rEig": {
+      "name": "moles4",
+      "rangelow": "0"
+    },
+    "vbVW": {
+      "name": "frecklesweight6",
+      "rangelow": "0"
+    },
+    "AKpf": {
+      "name": "frecklesweight2",
+      "rangelow": "0"
+    },
+    "DNFe": {
+      "name": "freckles5",
+      "rangelow": "0"
+    },
+    "IspD": {
+      "name": "freckles1",
+      "rangelow": "0"
+    },
+    "ivGt": {
+      "name": "molesweight4",
+      "rangelow": "0"
+    },
+    "pqyU": {
+      "name": "molesweight0",
+      "rangelow": "0"
+    },
+    "XoTA": {
+      "name": "molesweight2",
+      "rangelow": "0"
+    },
+    "cBzJ": {
+      "name": "molesweight6",
+      "rangelow": "0"
+    },
+    "eIgP": {
+      "name": "frecklesweight0",
+      "rangelow": "0"
+    },
+    "lhoq": {
+      "name": "frecklesweight4",
+      "rangelow": "0"
+    },
+    "pyPo": {
+      "name": "moles6",
+      "rangelow": "0"
+    },
+    "qjbN": {
+      "name": "moles2",
+      "rangelow": "0"
+    },
+    "CCIT": {
+      "name": "freckles3",
+      "rangelow": "0"
+    },
+    "JzwK": {
+      "name": "freckles7",
+      "rangelow": "0"
+    },
+    "SEgA": {
+      "name": "freckles6",
+      "rangelow": "0"
+    },
+    "ZBsd": {
+      "name": "freckles2",
+      "rangelow": "0"
+    },
+    "aiYo": {
+      "name": "frecklesweight5",
+      "rangelow": "0"
+    },
+    "hDQh": {
+      "name": "frecklesweight1",
+      "rangelow": "0"
+    },
+    "loXX": {
+      "name": "moles3",
+      "rangelow": "0"
+    },
+    "mxLe": {
+      "name": "moles7",
+      "rangelow": "0"
+    },
+    "zCjL": {
+      "name": "molesweight7",
+      "rangelow": "0"
+    },
+    "EjDi": {
+      "name": "molesweight3",
+      "rangelow": "0"
+    }
+  },
+  "ytIC": {
+    "axuK": {
+      "name": "molesweight1",
+      "rangelow": "0"
+    },
+    "hsCD": {
+      "name": "molesweight5",
+      "rangelow": "0"
+    },
+    "HvlV": {
+      "name": "freckles0",
+      "rangelow": "0"
+    },
+    "MGBc": {
+      "name": "freckles4",
+      "rangelow": "0"
+    },
+    "YHSO": {
+      "name": "moles5",
+      "rangelow": "0"
+    },
+    "baCr": {
+      "name": "moles1",
+      "rangelow": "0"
+    },
+    "fRlp": {
+      "name": "frecklesweight3",
+      "rangelow": "0"
+    },
+    "kYRM": {
+      "name": "frecklesweight7",
+      "rangelow": "0"
+    },
+    "ohSp": {
+      "name": "moles0",
+      "rangelow": "0"
+    },
+    "rEig": {
+      "name": "moles4",
+      "rangelow": "0"
+    },
+    "vbVW": {
+      "name": "frecklesweight6",
+      "rangelow": "0"
+    },
+    "AKpf": {
+      "name": "frecklesweight2",
+      "rangelow": "0"
+    },
+    "DNFe": {
+      "name": "freckles5",
+      "rangelow": "0"
+    },
+    "IspD": {
+      "name": "freckles1",
+      "rangelow": "0"
+    },
+    "ivGt": {
+      "name": "molesweight4",
+      "rangelow": "0"
+    },
+    "pqyU": {
+      "name": "molesweight0",
+      "rangelow": "0"
+    },
+    "XoTA": {
+      "name": "molesweight2",
+      "rangelow": "0"
+    },
+    "cBzJ": {
+      "name": "molesweight6",
+      "rangelow": "0"
+    },
+    "eIgP": {
+      "name": "frecklesweight0",
+      "rangelow": "0"
+    },
+    "lhoq": {
+      "name": "frecklesweight4",
+      "rangelow": "0"
+    },
+    "pyPo": {
+      "name": "moles6",
+      "rangelow": "0"
+    },
+    "qjbN": {
+      "name": "moles2",
+      "rangelow": "0"
+    },
+    "CCIT": {
+      "name": "freckles3",
+      "rangelow": "0"
+    },
+    "JzwK": {
+      "name": "freckles7",
+      "rangelow": "0"
+    },
+    "SEgA": {
+      "name": "freckles6",
+      "rangelow": "0"
+    },
+    "ZBsd": {
+      "name": "freckles2",
+      "rangelow": "0"
+    },
+    "aiYo": {
+      "name": "frecklesweight5",
+      "rangelow": "0"
+    },
+    "hDQh": {
+      "name": "frecklesweight1",
+      "rangelow": "0"
+    },
+    "loXX": {
+      "name": "moles3",
+      "rangelow": "0"
+    },
+    "mxLe": {
+      "name": "moles7",
+      "rangelow": "0"
+    },
+    "zCjL": {
+      "name": "molesweight7",
+      "rangelow": "0"
+    },
+    "EjDi": {
+      "name": "molesweight3",
+      "rangelow": "0"
+    }
+  },
+  "SPTx": {
+    "BALc": {
+      "name": "photofit",
+      "rangelow": "0"
+    }
+  },
+  "anIr": {
+    "axuK": {
+      "name": "molesweight1",
+      "rangelow": "0"
+    },
+    "hsCD": {
+      "name": "molesweight5",
+      "rangelow": "0"
+    },
+    "HvlV": {
+      "name": "freckles0",
+      "rangelow": "0"
+    },
+    "MGBc": {
+      "name": "freckles4",
+      "rangelow": "0"
+    },
+    "YHSO": {
+      "name": "moles5",
+      "rangelow": "0"
+    },
+    "baCr": {
+      "name": "moles1",
+      "rangelow": "0"
+    },
+    "fRlp": {
+      "name": "frecklesweight3",
+      "rangelow": "0"
+    },
+    "kYRM": {
+      "name": "frecklesweight7",
+      "rangelow": "0"
+    },
+    "ohSp": {
+      "name": "moles0",
+      "rangelow": "0"
+    },
+    "rEig": {
+      "name": "moles4",
+      "rangelow": "0"
+    },
+    "vbVW": {
+      "name": "frecklesweight6",
+      "rangelow": "0"
+    },
+    "AKpf": {
+      "name": "frecklesweight2",
+      "rangelow": "0"
+    },
+    "DNFe": {
+      "name": "freckles5",
+      "rangelow": "0"
+    },
+    "IspD": {
+      "name": "freckles1",
+      "rangelow": "0"
+    },
+    "ivGt": {
+      "name": "molesweight4",
+      "rangelow": "0"
+    },
+    "pqyU": {
+      "name": "molesweight0",
+      "rangelow": "0"
+    },
+    "XoTA": {
+      "name": "molesweight2",
+      "rangelow": "0"
+    },
+    "cBzJ": {
+      "name": "molesweight6",
+      "rangelow": "0"
+    },
+    "eIgP": {
+      "name": "frecklesweight0",
+      "rangelow": "0"
+    },
+    "lhoq": {
+      "name": "frecklesweight4",
+      "rangelow": "0"
+    },
+    "pyPo": {
+      "name": "moles6",
+      "rangelow": "0"
+    },
+    "qjbN": {
+      "name": "moles2",
+      "rangelow": "0"
+    },
+    "CCIT": {
+      "name": "freckles3",
+      "rangelow": "0"
+    },
+    "JzwK": {
+      "name": "freckles7",
+      "rangelow": "0"
+    },
+    "SEgA": {
+      "name": "freckles6",
+      "rangelow": "0"
+    },
+    "ZBsd": {
+      "name": "freckles2",
+      "rangelow": "0"
+    },
+    "aiYo": {
+      "name": "frecklesweight5",
+      "rangelow": "0"
+    },
+    "hDQh": {
+      "name": "frecklesweight1",
+      "rangelow": "0"
+    },
+    "loXX": {
+      "name": "moles3",
+      "rangelow": "0"
+    },
+    "mxLe": {
+      "name": "moles7",
+      "rangelow": "0"
+    },
+    "zCjL": {
+      "name": "molesweight7",
+      "rangelow": "0"
+    },
+    "EjDi": {
+      "name": "molesweight3",
+      "rangelow": "0"
+    }
+  },
+  "Jpfv": {
+    "SBCD": {
+      "name": "stadiumlanguageindex",
+      "rangelow": "-1"
+    }
+  },
+  "LXlu": {
+    "axuK": {
+      "name": "molesweight1",
+      "rangelow": "0"
+    },
+    "hsCD": {
+      "name": "molesweight5",
+      "rangelow": "0"
+    },
+    "HvlV": {
+      "name": "freckles0",
+      "rangelow": "0"
+    },
+    "MGBc": {
+      "name": "freckles4",
+      "rangelow": "0"
+    },
+    "YHSO": {
+      "name": "moles5",
+      "rangelow": "0"
+    },
+    "baCr": {
+      "name": "moles1",
+      "rangelow": "0"
+    },
+    "fRlp": {
+      "name": "frecklesweight3",
+      "rangelow": "0"
+    },
+    "kYRM": {
+      "name": "frecklesweight7",
+      "rangelow": "0"
+    },
+    "ohSp": {
+      "name": "moles0",
+      "rangelow": "0"
+    },
+    "rEig": {
+      "name": "moles4",
+      "rangelow": "0"
+    },
+    "vbVW": {
+      "name": "frecklesweight6",
+      "rangelow": "0"
+    },
+    "AKpf": {
+      "name": "frecklesweight2",
+      "rangelow": "0"
+    },
+    "DNFe": {
+      "name": "freckles5",
+      "rangelow": "0"
+    },
+    "IspD": {
+      "name": "freckles1",
+      "rangelow": "0"
+    },
+    "ivGt": {
+      "name": "molesweight4",
+      "rangelow": "0"
+    },
+    "pqyU": {
+      "name": "molesweight0",
+      "rangelow": "0"
+    },
+    "XoTA": {
+      "name": "molesweight2",
+      "rangelow": "0"
+    },
+    "cBzJ": {
+      "name": "molesweight6",
+      "rangelow": "0"
+    },
+    "eIgP": {
+      "name": "frecklesweight0",
+      "rangelow": "0"
+    },
+    "lhoq": {
+      "name": "frecklesweight4",
+      "rangelow": "0"
+    },
+    "pyPo": {
+      "name": "moles6",
+      "rangelow": "0"
+    },
+    "qjbN": {
+      "name": "moles2",
+      "rangelow": "0"
+    },
+    "CCIT": {
+      "name": "freckles3",
+      "rangelow": "0"
+    },
+    "JzwK": {
+      "name": "freckles7",
+      "rangelow": "0"
+    },
+    "SEgA": {
+      "name": "freckles6",
+      "rangelow": "0"
+    },
+    "ZBsd": {
+      "name": "freckles2",
+      "rangelow": "0"
+    },
+    "aiYo": {
+      "name": "frecklesweight5",
+      "rangelow": "0"
+    },
+    "hDQh": {
+      "name": "frecklesweight1",
+      "rangelow": "0"
+    },
+    "loXX": {
+      "name": "moles3",
+      "rangelow": "0"
+    },
+    "mxLe": {
+      "name": "moles7",
+      "rangelow": "0"
+    },
+    "zCjL": {
+      "name": "molesweight7",
+      "rangelow": "0"
+    },
+    "EjDi": {
+      "name": "molesweight3",
+      "rangelow": "0"
+    }
+  }
+}

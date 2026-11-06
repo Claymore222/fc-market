@@ -1,0 +1,8 @@
+{
+  "version": "1",
+  "maxMoves": 30,
+  "maxAmount": 1000000000000,
+  "$costRangeComment": "Olası tutar aralığı referansın çarpanıdır. Alt uç, Chesterfield kaydındaki 331 yapay zekâ transferinde ortanca bedel/değer oranı 0,54 (p10 0,33, p90 1,01) ölçümüne dayanır (01.11.2026). Üst uç güvenlik payıdır: kullanıcının ödediği bedel henüz ölçülmedi (DOĞRULANACAK). Kullanıcı tutarı ve serbest oyuncu bonservisi aralığa girmez.",
+  "feeRange": [0.5, 1.75],
+  "wageRange": [0.9, 1.5]
+}

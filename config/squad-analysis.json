@@ -1,0 +1,49 @@
+{
+  "version": "4",
+  "playerPreferenceChoices": {
+    "RB": { "quick-back": "Hızlı bek", "technical-back": "Teknik bek", "balanced-back": "Dengeli bek" },
+    "LB": { "quick-back": "Hızlı bek", "technical-back": "Teknik bek", "balanced-back": "Dengeli bek" },
+    "RW": { "quick-wing": "Hızlı kanat", "technical-wing": "Teknik kanat", "inside-wing": "İçe kat eden kanat" },
+    "LW": { "quick-wing": "Hızlı kanat", "technical-wing": "Teknik kanat", "inside-wing": "İçe kat eden kanat" },
+    "RM": { "quick-wing": "Hızlı kanat", "technical-wing": "Teknik kanat", "inside-wing": "İçe kat eden kanat" },
+    "LM": { "quick-wing": "Hızlı kanat", "technical-wing": "Teknik kanat", "inside-wing": "İçe kat eden kanat" },
+    "ST": { "target-striker": "Uzun pivot", "mobile-striker": "Kısa ve çabuk", "clinical-striker": "Bitirici" },
+    "CAM": { "technical-ten": "Teknik oyun kurucu", "scoring-ten": "Golcü 10 numara" }
+  },
+  "depth": {
+    "version": "2",
+    "minBaselinePlayers": 5,
+    "starterGap": { "win-now": 6, "balanced": 8, "develop": 10 },
+    "rotationGap": { "win-now": 12, "balanced": 14, "develop": 16 },
+    "developmentAge": 23,
+    "matureAge": 30,
+    "matureGoalkeeperAge": 34,
+    "longAbsenceDays": 45,
+    "need": {
+      "minLeagueClubs": 8, "minClubPlayers": 16, "bottomShare": 0.34,
+      "starterDeficit": { "win-now": 1, "balanced": 1.5, "develop": 2.5 },
+      "rotationDeficit": { "win-now": 3, "balanced": 4, "develop": 6 },
+      "starterPoint": 6, "rotationPoint": 2, "leagueCap": 40,
+      "starterContract": 12, "rotationContract": 6, "futureGap": 6, "matureStarter": 4,
+      "minimumXiGain": 2
+    }
+  },
+  "formations": {
+    "4-2-3-1": ["GK", "RB", "RCB", "LCB", "LB", "RDM", "LDM", "RM", "CAM", "LM", "ST"],
+    "4-3-3": ["GK", "RB", "RCB", "LCB", "LB", "CDM", "RCM", "LCM", "RW", "ST", "LW"],
+    "4-4-2": ["GK", "RB", "RCB", "LCB", "LB", "RM", "RCM", "LCM", "LM", "RS", "LS"],
+    "4-1-4-1": ["GK", "RB", "RCB", "LCB", "LB", "CDM", "RM", "RCM", "LCM", "LM", "ST"],
+    "4-3-1-2": ["GK", "RB", "RCB", "LCB", "LB", "RCM", "CM", "LCM", "CAM", "RS", "LS"],
+    "3-5-2": ["GK", "RCB", "CB", "LCB", "RM", "RDM", "LDM", "LM", "CAM", "RS", "LS"],
+    "3-4-3": ["GK", "RCB", "CB", "LCB", "RM", "RCM", "LCM", "LM", "RW", "ST", "LW"],
+    "5-3-2": ["GK", "RWB", "RCB", "CB", "LCB", "LWB", "RCM", "CM", "LCM", "RS", "LS"]
+  },
+  "slotAliases": { "RWB": "RB", "LWB": "LB", "RCB": "CB", "LCB": "CB", "RDM": "CDM", "LDM": "CDM", "RCM": "CM", "LCM": "CM", "RAM": "CAM", "LAM": "CAM", "RS": "ST", "LS": "ST", "SW": "CB" },
+  "choices": {
+    "attack": { "balanced": "Dengeli", "wing-play": "Çizgi ve orta", "inside-forwards": "İçe kat eden kanatlar", "possession": "Merkezden pas", "direct": "Hızlı geçiş" },
+    "defense": { "high-press": "Önde baskı", "mid-block": "Orta blok", "low-block": "Derinde karşılama" },
+    "tempo": { "slow": "Sakin", "balanced": "Dengeli", "fast": "Hızlı" },
+    "horizon": { "win-now": "Hemen sonuç", "balanced": "Dengeli gelişim", "develop": "Genç takım projesi" },
+    "matchMode": { "manual": "Kendim oynuyorum", "simulation": "Simülasyon", "mixed": "Karışık" }
+  }
+}

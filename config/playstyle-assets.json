@@ -1,0 +1,367 @@
+{
+  "source": "https://www.ea.com/games/ea-sports-fc/ratings/abilities-ratings/finesse-shot/play-style/trait1_1",
+  "retrieved": "2026-10-29",
+  "copyright": "EA SPORTS / Electronic Arts. Original artwork; no open-source license claimed.",
+  "assets": {
+    "acrobatic": {
+      "name": "Acrobatic",
+      "url": "https://drop-assets.ea.com/images/2sRRBHcIe0zrDwYaRI2xG3/d02b8c8855de853470897009e030eb5d/Acrobatic.png",
+      "sha256": "ba88ac054677e07d5c760b03af410dc3099dc10e0eeeb04a042902920965679b"
+    },
+    "acrobatic-plus": {
+      "name": "Acrobatic+",
+      "url": "https://drop-assets.ea.com/images/5Zb5jkAdaqaJSPFvb7W3zl/cf788143996a34edc03b1d1dc6a45169/Acrobatic_.png",
+      "sha256": "54fd0c73a2f64fae2ead4f8b177da654443a3284b556161f0dbb75831d715e4a"
+    },
+    "aerial-fortress": {
+      "name": "Aerial Fortress",
+      "url": "https://drop-assets.ea.com/images/3rsDbUXd3MZX39YTsk6lKe/404db89f2237eeb7466668a730c52a4b/Aerial_Fortress.png",
+      "sha256": "5af3603f08cfcc87bc10b7bba57198eac766d1cb467b9a604585932c3408d8d3"
+    },
+    "aerial-fortress-plus": {
+      "name": "Aerial Fortress+",
+      "url": "https://drop-assets.ea.com/images/2cu3mn9rRT3OCBU0NRr48e/9c8c51c72085ee133d82eba3fac7c0dd/Aerial_Fortress_.png",
+      "sha256": "b18e275de6b627e8969ad7c87a952b0d2fd3767a252f561780b9d7059d68b2bb"
+    },
+    "anticipate": {
+      "name": "Anticipate",
+      "url": "https://drop-assets.ea.com/images/4xPnUcL7thizFB7qmhlwUR/1ade7a0f77d5e875c2db869964540a35/Anticipate.png",
+      "sha256": "590da5b87768e95d91a06abcd5f207eb9e78e3818817a6fcf4b5180bb5c445b6"
+    },
+    "anticipate-plus": {
+      "name": "Anticipate+",
+      "url": "https://drop-assets.ea.com/images/4Tw0rjhFcLnurLg5JR2Woo/f0df6f8cdd017e6001109c86eecea980/Anticipate_.png",
+      "sha256": "e6f2de7c05d57f3e04970ac477c1d8abdb50c1c2609af11a58c129719bb8458a"
+    },
+    "block": {
+      "name": "Block",
+      "url": "https://drop-assets.ea.com/images/2Rlftzr8lqUdI29suCQVWe/43c6c36e8bd5fa26b88478d4354611a2/Block.png",
+      "sha256": "9750a17a77d1d0a2a892d5dc5865cdb465b7718ce3eac0e76619f0de304dbc37"
+    },
+    "block-plus": {
+      "name": "Block+",
+      "url": "https://drop-assets.ea.com/images/55a6j8nZt1EKQeN9kaqiEs/a2d73085eee67e822161e082e82a8ee3/Block_.png",
+      "sha256": "225bc7ccefb89d7cb3aa5e7e29b8685599c83092d9063159c351f6372f399565"
+    },
+    "bruiser": {
+      "name": "Bruiser",
+      "url": "https://drop-assets.ea.com/images/7euMJ2jVypFrFPQesWuGGm/14019168b12faac1584a2920d5c2d5d9/Bruiser.png",
+      "sha256": "018dd1d51cab221635e0aae8989507d272c1e90d88e1f5f9634782b38c571c26"
+    },
+    "bruiser-plus": {
+      "name": "Bruiser+",
+      "url": "https://drop-assets.ea.com/images/6bmh6DEgcusgxP72p2dudl/700d6fffd8b2e792e6cd7fd02fb88314/Bruiser_.png",
+      "sha256": "043185a01014b1ae31ad3beb39bbde285441dc71d44280dda142dedf525344a4"
+    },
+    "chip-shot": {
+      "name": "Chip Shot",
+      "url": "https://drop-assets.ea.com/images/6Gl08kt7odn1fJNX74CS2P/984feac3cd8d99902f5cb5131d5fd26a/Chip_Shot.png",
+      "sha256": "374e987b3e61af8f8286248c209e73068d1286568dc1cf0743486931a9720292"
+    },
+    "chip-shot-plus": {
+      "name": "Chip Shot+",
+      "url": "https://drop-assets.ea.com/images/4dubNf6b2DxdV1MvuUmd14/d4bbc70640a199b15745946057572ff1/Chip_Shot_.png",
+      "sha256": "a519f1af76ae7fb4efcdeee5cd9892c54b15d278a373777bfb3dbe05392eaad7"
+    },
+    "cross-claimer": {
+      "name": "Cross Claimer",
+      "url": "https://drop-assets.ea.com/images/4Uvgm6UNiSz3say1zZqKDC/51837f53072d5e01063699f6d2b7401a/Cross_Claimer.png",
+      "sha256": "c2ebd3f865eebe6cb56d91af558aacd6154b90a9e9f1401cdf915012ca4e6a53"
+    },
+    "cross-claimer-plus": {
+      "name": "Cross Claimer+",
+      "url": "https://drop-assets.ea.com/images/5aYaAtUsJBRaGEHAuv9OxW/bb12d221a86b53e4e13e2afe57457114/Cross_Claimer_.png",
+      "sha256": "87601ede11662f439972e7203ce85ee1a6cc13ce646540402869b638c69cd8b4"
+    },
+    "dead-ball": {
+      "name": "Dead Ball",
+      "url": "https://drop-assets.ea.com/images/1razu2wcM3XA82VvB7NyUm/eec6b07080e49d6bf2d7a7951a22375f/Dead_Ball.png",
+      "sha256": "9ec5905b1a8d85b8aad3a30e524532399928ce8cf8d74560ae1ace7fad896330"
+    },
+    "dead-ball-plus": {
+      "name": "Dead Ball+",
+      "url": "https://drop-assets.ea.com/images/3gnWRIayfhmIFIhhYCwsR6/bb49458fbb7f0d06890bde757190e1bc/Dead_Ball_.png",
+      "sha256": "5510d5fdc61e75599fab820fc45a70a4da2a5ac9d69bc6aa0c8659a699d96d34"
+    },
+    "deflector": {
+      "name": "Deflector",
+      "url": "https://drop-assets.ea.com/images/6nb9RYWNVuvUaLZDskFao7/0ad930b0874e7c9454b31de942c0d3f1/Deflector.png",
+      "sha256": "c0abc68cd051ab1678c29571ef4d80ab396530b9ea48b4e5e3fc99655f3c95ba"
+    },
+    "deflector-plus": {
+      "name": "Deflector+",
+      "url": "https://drop-assets.ea.com/images/5IvxJa33W11EFxBbwHZmFL/e359704e2f786f11087031b55563647f/Deflector_.png",
+      "sha256": "2ee5fbfd8a362099404cbd17741a11aa366d09988e7c1f679a58cbd2b6b4eae0"
+    },
+    "enforcer": {
+      "name": "Enforcer",
+      "url": "https://drop-assets.ea.com/images/2sNQz8b9dgV0hW8vl7oOvV/d7a503dbd4c73b232055b3ca06aa88eb/Enforcer.png",
+      "sha256": "650a3f7168d1e46cd28ab1144c2de45883791be892c36a2921cbb69a6b4093ad"
+    },
+    "enforcer-plus": {
+      "name": "Enforcer+",
+      "url": "https://drop-assets.ea.com/images/57s159kdUl4cgq97ETlO2s/78feee8fc6fdf4478e98aac7598690ea/Enforcer_.png",
+      "sha256": "96b1ac6197947cfc5436f6287d7e875628e396c1ae68e3003853ee6fabc4316d"
+    },
+    "far-reach": {
+      "name": "Far Reach",
+      "url": "https://drop-assets.ea.com/images/7zbtymM2pCbANuM7wKFYZU/698e8ece65867df97e61189ac6666463/Far_Reach.png",
+      "sha256": "5e684a09b3b998c46766c40cff7390f0ee06462a80aa585587cf329424b1bbdb"
+    },
+    "far-reach-plus": {
+      "name": "Far Reach+",
+      "url": "https://drop-assets.ea.com/images/67QsfAz3PilmHuQ0wwXWQM/a25c6a13b33dee6a5ef74c0e66092a24/Far_Reach_.png",
+      "sha256": "daad078d19b103abf49470d33d0008e172a33eb71edd7335faac80dd22ff364a"
+    },
+    "far-throw": {
+      "name": "Far Throw",
+      "url": "https://drop-assets.ea.com/images/3CjCz29sjIt1xMZTRDi4vQ/8ecb201b0ae7d6d536d03c847a768ffa/Far_Throw.png",
+      "sha256": "1aea97fc391e1fe8791291a6e6085a06c08ae08dd50cdc8f3e0da72c74b1f707"
+    },
+    "far-throw-plus": {
+      "name": "Far Throw+",
+      "url": "https://drop-assets.ea.com/images/5xSZE4qmelzar0d226znu7/efbb86f049c31270ad23147fbebe08f5/Far_Throw_.png",
+      "sha256": "25cd66bd23cd3aedcef708168009b2e45e6522dcbee852256e1a42d88f62fa9b"
+    },
+    "finesse-shot": {
+      "name": "Finesse Shot",
+      "url": "https://drop-assets.ea.com/images/468u1R1p2k1fA6WBHi0OEn/fb9d49ed2a8fb500cd5a184937b96b34/Finesse_Shot.png",
+      "sha256": "547d8708272b120d23833a7a4df816dc2e4170c40d465ebe9bb58ff169ecdb46"
+    },
+    "finesse-shot-plus": {
+      "name": "Finesse Shot+",
+      "url": "https://drop-assets.ea.com/images/4KwpQLGCfHPMd9oq5Xl42z/2101ac72c690fd36205fb9c6dbac6bd1/Finesse_Shot_.png",
+      "sha256": "328fb0e627ab43d07e8d9ab10f81850ecb64109c603055b334a5a0faa00976e9"
+    },
+    "first-touch": {
+      "name": "First Touch",
+      "url": "https://drop-assets.ea.com/images/3f727XsoDVLbT49oMk0HBu/2787568be8ccb2d5daa2d18fabacad97/First_Touch.png",
+      "sha256": "e4b7af378fc8aeb9c10606fc15441e4707c2365c8a5e05e50e6307b77a68d2a2"
+    },
+    "first-touch-plus": {
+      "name": "First Touch+",
+      "url": "https://drop-assets.ea.com/images/25f6Natq9IszUKRAVJb3s8/10a1084994c7ad20fd41280fc0ff18b3/First_Touch_.png",
+      "sha256": "b00738788ed7e19f6c74317c1c9ecf3cb86d68013e7d44aaea28efcac6a18732"
+    },
+    "footwork": {
+      "name": "Footwork",
+      "url": "https://drop-assets.ea.com/images/1s2muXoHUmP1T0vGYKXSl1/6d265b13804069371f16a58788703a33/Footwork.png",
+      "sha256": "ed6d6ed832b469f6d82235a69b55fd9bf7741bb2e571b56e17ee0d5001ff1a27"
+    },
+    "footwork-plus": {
+      "name": "Footwork+",
+      "url": "https://drop-assets.ea.com/images/5UCymkZPZUIQSWrVV9P6ko/b5a16094015fb502405698d40cb0cfce/Footwork_.png",
+      "sha256": "3ca2e643b0592c3bd3c30ae952dc1bbcbc36da1dbd13038af19777b8becab210"
+    },
+    "gamechanger": {
+      "name": "Gamechanger",
+      "url": "https://drop-assets.ea.com/images/2v8I0GQrtREaEJzJcyStKe/e46d719e4e5ed88ac5a1f671c7448f4a/Gamechanger.png",
+      "sha256": "4435ceb1676367a7e62b030a8b6af6ffb23ab9a4513665a06b5cd1676f087602"
+    },
+    "gamechanger-plus": {
+      "name": "Gamechanger+",
+      "url": "https://drop-assets.ea.com/images/4weDkEpJXhmum7QkyBkRFC/42c3b090cd6842f23c00f9057edaef3c/Gamechanger_.png",
+      "sha256": "d39745df954346108438b2fdf2276a0827400db01eb1b3d3b481917f3464777a"
+    },
+    "incisive-pass": {
+      "name": "Incisive Pass",
+      "url": "https://drop-assets.ea.com/images/2K5BYfVYRnrdjt8F3hwI04/62f147b6a436c107bfa3d042c1d5728d/Incisive_Pass.png",
+      "sha256": "b5536e7cf8fcc69c3e82461532699e206d87464985c06c1b9541b049e079ba3d"
+    },
+    "incisive-pass-plus": {
+      "name": "Incisive Pass+",
+      "url": "https://drop-assets.ea.com/images/3AFfBi6PkSPh9YdlmsS9iY/944496273003729dbef5a91426506cf4/Incisive_Pass_.png",
+      "sha256": "ea77bc2af8a166729b67b5756a0c12dacf1df5949d4bc9dd1eeca17f55a0e6fd"
+    },
+    "intercept": {
+      "name": "Intercept",
+      "url": "https://drop-assets.ea.com/images/5ysv7Iw8jDHl7sp1JXqIa7/d34004fed8c95bde083dcf8257391a70/Intercept.png",
+      "sha256": "1e43ae447e8093e6fc369a01055b3895bfb1c24280564acfa95b72d0c9c58c79"
+    },
+    "intercept-plus": {
+      "name": "Intercept+",
+      "url": "https://drop-assets.ea.com/images/7ewPPmqkwIRvGmV5WVFwa7/65b03a2146e76a0562b86341d2a72ee8/Intercept_.png",
+      "sha256": "3614f9576ef8878bab1c4fadeb6ea1c1014c9c7bf6b4c71e4031e65e88d974b3"
+    },
+    "inventive": {
+      "name": "Inventive",
+      "url": "https://drop-assets.ea.com/images/4fpo31RdL5T0vrzNqcSc4x/f82209bfd51270dcc447d4313b3e61f1/Inventive.png",
+      "sha256": "f02e695f798247079a0745b7cff6fb96c22a5baa610dd149ccb3b8ae96e510b0"
+    },
+    "inventive-plus": {
+      "name": "Inventive+",
+      "url": "https://drop-assets.ea.com/images/Qx6cJsPc8kg3lW5RIg03U/74548115e8b21760437ee6012b8d2709/Inventive_.png",
+      "sha256": "01327c4fb6d3dc40893cb61b0906cd768bc2e5c57971986452f769b9f061e617"
+    },
+    "jockey": {
+      "name": "Jockey",
+      "url": "https://drop-assets.ea.com/images/7lHjpOBSghE6Ywt1jgVv1C/21f9914d00f073d79d4b46cac71b9087/Jockey.png",
+      "sha256": "ac5ee02c0725620bda74ccce8f388fa0cea131b85e7ffc3504c5341b75db6a39"
+    },
+    "jockey-plus": {
+      "name": "Jockey+",
+      "url": "https://drop-assets.ea.com/images/6v06K0kg314Jd2SeVlVWFI/c0ac7c9179e3e7ebf9b26fb9d25897fb/Jockey_.png",
+      "sha256": "f32dfde8d5a7b5eb07a9fc985a2d6b5fda05207ee65112911b37c2513916dc4c"
+    },
+    "long-ball-pass": {
+      "name": "Long Ball Pass",
+      "url": "https://drop-assets.ea.com/images/7jwRDD4zkOsqRpc821t73d/16d46d57a5dfc7dd5dd5f8de0fd26a99/Long_Ball_Pass.png",
+      "sha256": "61616806661324e2d7fd8f9f6a829242fcc019d461a8bf787d4b05aaf0b3feaf"
+    },
+    "long-ball-pass-plus": {
+      "name": "Long Ball Pass+",
+      "url": "https://drop-assets.ea.com/images/59ogaJFyi7JRTBfMF1MBHf/e7fe84a1da6b070a6a41460257b9ec59/Long_Ball_Pass_.png",
+      "sha256": "d3605b7d8878fef87c85905e09c36b04f8f73cfc42b5115fc7272e93a57a3bb0"
+    },
+    "long-throw": {
+      "name": "Long Throw",
+      "url": "https://drop-assets.ea.com/images/51OlohNQvoEwW0aLhknAHh/58fa7d903d10f6d8cfa2622f62ba6b6f/Long_Throw.png",
+      "sha256": "30277a95fd1303746527d225c763432abcab04fa46ffb7017d375036c4b6cd10"
+    },
+    "long-throw-plus": {
+      "name": "Long Throw+",
+      "url": "https://drop-assets.ea.com/images/45xLAhID9UwXLUcWGmWYBV/de9248ba0fd101f7bf048d1fc0b0cb0c/Long_Throw_.png",
+      "sha256": "c473dcdc6d3c77137c8237716da205dbc2b0c43a96121106c5d37da480e214b7"
+    },
+    "low-driven-shot": {
+      "name": "Low Driven Shot",
+      "url": "https://drop-assets.ea.com/images/1NfyWsEpQ7s9bhWWt92lbn/5b5dbeb0e55c2e9241cdc26c70ee2d2c/Low_Driven_Shot.png",
+      "sha256": "40bf1bc406c16477027f092a9d4d80503252c749a1e3bac03a33f5a55f95eef8"
+    },
+    "low-driven-shot-plus": {
+      "name": "Low Driven Shot+",
+      "url": "https://drop-assets.ea.com/images/7lY8ZhvwacbwMVTeuXYmM6/0e9f0e9411ad83a18712cbc1549a8317/Low_Driven_Shot_.png",
+      "sha256": "0bbc326de32402a97118ded9c45afc68353597872c216251cb91afd7d636db25"
+    },
+    "pinged-pass": {
+      "name": "Pinged Pass",
+      "url": "https://drop-assets.ea.com/images/1mXBWIBgJSpYoIa1C4r5FX/7220e78a4049530f4e9fa642b1656fa4/Pinged_Pass.png",
+      "sha256": "86088fd7ee53a596c5aa2f8f00cfb9869bc97dac7c9fad9cba5f19842b55b08d"
+    },
+    "pinged-pass-plus": {
+      "name": "Pinged Pass+",
+      "url": "https://drop-assets.ea.com/images/oo97JUOYDmoWUVpz38rYE/405e5f5068bbb56c43fcf3e0f79e3f02/Pinged_Pass_.png",
+      "sha256": "abc9adb5ea20805986960ca6a433e37d65df33e8e1c0d66a8ffceb05eaeaa7c4"
+    },
+    "power-shot": {
+      "name": "Power Shot",
+      "url": "https://drop-assets.ea.com/images/3ohVoKWSsvT44qgjabWqfV/e536ef26ad854c3c4cbf63ed7954b9cd/Power_Shot.png",
+      "sha256": "af65bc59a58638d372d1d72516a748ae687067e5782eb7e775896db26d664b9e"
+    },
+    "power-shot-plus": {
+      "name": "Power Shot+",
+      "url": "https://drop-assets.ea.com/images/3SLCWnaVMQFNLdRmNpUyyP/545111e2c601b507f79588f950b2848f/Power_Shot_.png",
+      "sha256": "02ca4949538fab2495933bbefb0bdc56649d51b65ad7368ae62865e3c6ae181f"
+    },
+    "precision-header": {
+      "name": "Precision Header",
+      "url": "https://drop-assets.ea.com/images/3ync8fbblS4zLzF3p1VXmT/7752a5103c2ebd8be5cf1819379c66f4/Precision_Header.png",
+      "sha256": "1b55763ee85e3eaa2b28ce63f3b63bd1688d147f217b577cde42a7aa5dca2eb5"
+    },
+    "precision-header-plus": {
+      "name": "Precision Header+",
+      "url": "https://drop-assets.ea.com/images/1JxoSvhU54BcmD9DE5rVqT/34b15f2ac73c9c02db1552d306fbccbe/Precision_Header_.png",
+      "sha256": "ab17142ee89827ba20aba846e713fd29d8b8d46cf4ae53fda1b5deb5638be404"
+    },
+    "press-proven": {
+      "name": "Press Proven",
+      "url": "https://drop-assets.ea.com/images/5rUHwyLJRnvGV53Ba4Pj6M/9a3238695ae8103667ba02af391ac209/Press_Proven.png",
+      "sha256": "7e66fb2998261306a252082a4cb4244314a8ee81e0b42add12af37b4935bf272"
+    },
+    "press-proven-plus": {
+      "name": "Press Proven+",
+      "url": "https://drop-assets.ea.com/images/Z2otVfOlVmGuQSxqZYSjz/717d956dfebae4193e8d746e8f3d300a/Press_Proven_.png",
+      "sha256": "e64f4220798441f0e2f329c0e2406592bbf4558a3b58e8567d3af32a8f767362"
+    },
+    "quick-step": {
+      "name": "Quick Step",
+      "url": "https://drop-assets.ea.com/images/1xG25Zp3wvkLA5YewKiZah/f27f5fabd1e899fc0bbb817d2db233b1/Quick_Step.png",
+      "sha256": "697d33afb54e458b3682ab69dfc82241a6f2fb0d747c14c5480bd60599880e99"
+    },
+    "quick-step-plus": {
+      "name": "Quick Step+",
+      "url": "https://drop-assets.ea.com/images/44zHnq7IqO4ItY3NPzXNEC/d7fc408baa76e8ba053cd69e0a1a51c4/Quick_Step_.png",
+      "sha256": "9777d98acbe3d0d9b657b2fd7df84a26906e7f66832d704df86564f01be4a66c"
+    },
+    "rapid": {
+      "name": "Rapid",
+      "url": "https://drop-assets.ea.com/images/1aGsvwKyIFlRG1eoJSS0Ot/a4d3d661ff962795a632fe86439d2146/Rapid.png",
+      "sha256": "18934ab3e150925dabcd2e307c8864aa2ded6dd396b21a8b6882f09685e29824"
+    },
+    "rapid-plus": {
+      "name": "Rapid+",
+      "url": "https://drop-assets.ea.com/images/3bouBLJaUvpDtluboKK8gC/6fc716d67e1a7e9da59e2a2022018c11/Rapid_.png",
+      "sha256": "5539bbf35a580662cafb2f42533ad6b8db4949dfc1662b4c1f3252b5952b2095"
+    },
+    "relentless": {
+      "name": "Relentless",
+      "url": "https://drop-assets.ea.com/images/2vVuRxgvPNaAuFGqZZ9nDY/3e2505addd5a6b353becdeaf7173d187/Relentless.png",
+      "sha256": "70be7235b8083f4e3d7dd6358cfe1689b4b314c97835ecd72df88aeffd9ce152"
+    },
+    "relentless-plus": {
+      "name": "Relentless+",
+      "url": "https://drop-assets.ea.com/images/3hFTQQe2XXOx9eQjAFTAPF/48efd1569027da6e1c5e65259211febb/Relentless_.png",
+      "sha256": "f7fa36b0660f21941a6bd913509ec1f448fd0c31d962fe4b9eff9c0fd7897a42"
+    },
+    "rush-out": {
+      "name": "Rush Out",
+      "url": "https://drop-assets.ea.com/images/4wwnzFkg1zLTAc4QSsXiWO/5fa897cf739a93bddf3556e2323f9b8b/1v1_Close_Down.png",
+      "sha256": "5622effa71aedbc097993e34206d17c363c6af11c1a0108a36dba5be08b9e2a2"
+    },
+    "rush-out-plus": {
+      "name": "Rush Out+",
+      "url": "https://drop-assets.ea.com/images/2Dob5ZWyGDwaPtaOdJQDqT/a2ec208993396b49fcbd9fd959a72fc2/1v1_Close_Down_.png",
+      "sha256": "a67b1de3661530306a8e645fcb4f120e9031460e1a2a5dbe36a277dd1c68ae59"
+    },
+    "slide-tackle": {
+      "name": "Slide Tackle",
+      "url": "https://drop-assets.ea.com/images/7mI1lrxE0pv9iJfQFki9OA/8c1ecac325f923e049be72231c8c968a/Slide_Tackle.png",
+      "sha256": "0030a0ffd0bdec32633d029b956e4ddd9c3942f128be36ecda2278d1137d3600"
+    },
+    "slide-tackle-plus": {
+      "name": "Slide Tackle+",
+      "url": "https://drop-assets.ea.com/images/oMoLHfawtU6s08cupTpup/4c19ef50d267273c4495deb32a06c9eb/Slide_Tackle_.png",
+      "sha256": "f84965eff67def024fb4fcd7928406264a9963993039aa49bf83f7dce6353d6e"
+    },
+    "technical": {
+      "name": "Technical",
+      "url": "https://drop-assets.ea.com/images/5Esx7NK4YBU44O4bo07rvb/69ca9417da7fd07905f6c6956ad93f6d/Technical.png",
+      "sha256": "28e18c5dc70b7366cc1da16c6046c623eb382ce6250a835e80b81411af9dab78"
+    },
+    "technical-plus": {
+      "name": "Technical+",
+      "url": "https://drop-assets.ea.com/images/6cWRgF7ajOw0RTRFA7DwBk/8286927d45e7f2cfbf1020799d054468/Technical_.png",
+      "sha256": "b2b6e708e1faa760179cdcfda1f3e796d4eba2ae47869fa39d10de152087cbc2"
+    },
+    "tiki-taka": {
+      "name": "Tiki Taka",
+      "url": "https://drop-assets.ea.com/images/2tvHC5JQ2sXrN8wUTJWLEA/94b0f6a78d1a9e1348a33c9772f23afd/Tiki_Taka.png",
+      "sha256": "304d52ce433b7728102de6dc2e7c327ff13642a5e1da237b9788ea8960d81543"
+    },
+    "tiki-taka-plus": {
+      "name": "Tiki Taka+",
+      "url": "https://drop-assets.ea.com/images/41inaqjOz5PemcT2DAIIbO/ea5bce0dbf959316d4f7fea60824ef9b/Tiki_Taka_.png",
+      "sha256": "123e85bb545d33c3c0fee800a5cc0b290d4a9a3d8996c152aaa339221e0564f2"
+    },
+    "trickster": {
+      "name": "Trickster",
+      "url": "https://drop-assets.ea.com/images/47Ygd5ri33RgjIYGiTAJpj/f0723e6f2f89a98fb6e8200c3659c6a9/Trickster.png",
+      "sha256": "37a364ec701e309a97c90b21797d3a352f37d169411b1d77830f1553a809a782"
+    },
+    "trickster-plus": {
+      "name": "Trickster+",
+      "url": "https://drop-assets.ea.com/images/1exGiL699HqMQSIVKZ4gUV/734cdbdedc7971032ee3ac62c07a6542/Trickster_.png",
+      "sha256": "80939b45a35e621e600fb7b4dcf20f79c0170e32217cc33997cdc7fda03c5ec7"
+    },
+    "whipped-pass": {
+      "name": "Whipped Pass",
+      "url": "https://drop-assets.ea.com/images/FfTP29PWrRWZjEaiCCVoa/a1b345e4ae7023ed78b1efd68d28f392/Whipped_Pass.png",
+      "sha256": "c9d9e315e21ccb2c4f9b5c105b6abc563e0b9e6c2280b734ebf5264b5569797c"
+    },
+    "whipped-pass-plus": {
+      "name": "Whipped Pass+",
+      "url": "https://drop-assets.ea.com/images/5m8PmfQfBiA1HRsIPRGgJ4/fd22942ce1c5fa608227ea0573a9e339/Whipped_Pass_.png",
+      "sha256": "ef07962c77f5ad686723f84df700f0a95cec9c2170e9788b31344a38e6322880"
+    }
+  }
+}

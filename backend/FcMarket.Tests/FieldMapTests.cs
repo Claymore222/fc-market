@@ -28,6 +28,9 @@ public class FieldMapTests
             "nummatchesplayed", "homewins", "homedraws", "homelosses", "awaywins", "awaydraws", "awaylosses", "homegf",
             "homega", "awaygf", "awayga", "objective", "champion", "prevleagueid"),
         "teamplayerlinks" => Set("playerid", "teamid", "jerseynumber", "position", "form", "injury"),
+        // FC 27 kariyer kaydındaki formations tablosu (takım başına kayıtlı diziliş); kulüp incelemesi okur.
+        "formations" => Set(["teamid", "formationname", "offensiverating", "defenders", "midfielders", "attackers",
+            .. Enumerable.Range(0, 11).Select(i => "position" + i)]),
         "playerloans" => Set("playerid", "teamidloanedfrom", "loandateend", "isloantobuy"),
         "transfers" => Set("playerid", "sellingteamid", "buyingteamid", "transferamount", "transferdate"),
         "fixtures" => Set("fixtureid", "fixturedate", "fixturetime", "hometeamid", "awayteamid", "competitionid",

@@ -27,6 +27,7 @@ uygulamanın kendi shortlist/not/ayarları serbest.
 | Ek oyuncu bilgileri | Serbest oyuncunun kayıttaki maaşı (aktif maaştan ayrı), 7 alandan tüm mevkiler, krampon/tasarım/renk ve eldiven kodları; ekipman ürün adları DOĞRULANACAK |
 | Kadro analizi — Faz A/B/C | Transfer → Takım planı: profil ve bütçe, bağımsız derinlik/ihtiyaç sahası. TRANSFER doğrudan önerilerle açılır: takım/lig/bütçe bağlamı, 12 mevki, ilk 11/yedek/genç, varsayılan 5 aday, puan ve kısa profil notları, karşılaştırma/izleme. İsteğe bağlı sıralı tercih kartları. İstenen fiyat bilinmiyorsa üretilmez; gözlenen son transfer veya etiketli değer modeli yalnız ön eleme referansıdır |
 | Transfer paketi — Faz D | Adaydan Pakete ekle → Transfer paketim: ortak bonservis/haftalık maaş, koşullu satış, akademi terfisi, diziliş ve bağımsız önce/sonra derinlik. Hesapla/kaydet ayrıdır; kariyer/dal/mod ve sürüm korumalı. Bilinmeyen maliyetler sıfır olmaz. Paket öner düğmesi Düşük harcama / Dengeli / Yüksek katkı seçenekleri hazırlar, hesaplanmış taslakla yan yana gösterir; taslağa almak kullanıcının seçimidir. Olası maliyet aralığı varsayımdır, kalibrasyon bekliyor |
+| Kulüp incelemesi | Scout → Takımlar → İncele: herhangi bir takımın kayıtlı dizilişi ve oyun tarzı, lige göre kadro derinliği ve "gidersen ilk işin" ihtiyaçları, kulüp değerinden tahmini sezon başı bütçe (5 gerçek bütçeye kalibre), kendi kulübünle kıyas. Ayrıntı: data-dictionary *Kulüp incelemesi*. |
 | Transfer ekranı | TRANSFER sade tek akış: bir cümlelik öncelik, bütçe satırı, kadro içi ve sözleşme satırları, lig kıyası ve sözleşme riskiyle sıralı mevkiler, oyuncu satır listesi. Veri yetersizse koşullu, takviye gerekmiyorsa açık ifade |
 | Öneri mantığı | Mevki reytingi, beklenen maaş (tahmin), erişilebilirlik elemesi, yaş sınırlı gelişim puanı; bütçe üstü oyuncular ayrı bölümde. [Kurallar ve kanıt](recruitment-logic-fix-2026-10-30.md) |
 | Maç analizi — ilk sürüm | Home → Maç analizi: son 5/10/20 maç, yarışma filtresi, G/B/M, gol dengesi, gol yemeden biten maçlar ve gol ortalaması. Gerçek kayıt kaynağı/tarihi görünür; pas/topla oynama ve maç golcüleri henüz doğrulanmadı |
@@ -132,6 +133,7 @@ ayrıca ele alınır; bu plan oyun kayıtlarına veya oyuna yazım içermez.
   oyun açılmadı; mevcut kopyalarla skor analizi tamamlandı. [Test adımları](match-analysis-and-next-game-test-2026-10-30.md#yarın-oyunda-yapılacaklar).
 - ★ Kupa hedefleri ve asgari başarı koşulları. Moral/bütçe önceden; sezon arşivi, yönetim güveni, lig hedefi ve gelir-gider kategorileri 29 Ekim'de çözüldü (10 kayıt kopyası, CMTracker referansı); yeni alanlar DOĞRULANACAK.
 - Oyuncunun son 5 maçı, maçın adamı, kurtarış; sezon ödülleri ve haftanın takımı dolu olduğunda doğrulama.
+- İş teklifleri (menajerlik teklifi gelen kulüpler): tablolarda ve çözülen bloklarda yok. Teklif öncesi/sonrası iki kayıt kopyası karşılaştırılarak aranacak; bulunursa kulüp incelemesine bağlanır.
 
 ### 3. Farklılaştıran özellikler
 - **FAZ A/B/C TAMAMLANDI — kapsamlı kadro analizi ve oyuncu önerileri (30.10):** Yerel hesaplama motoru, teknik direktör

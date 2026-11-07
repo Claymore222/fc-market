@@ -45,7 +45,7 @@ export function SquadPage() {
       {teamId !== undefined && teamId !== d.snapshot.userTeamId && (
         <div className="flex items-center justify-between rounded-lg border border-cmt-blurple/40 bg-cmt-blurple/10 px-4 py-2 text-xs text-gray-200">
           <span>Başka bir kulübün kadrosu: <b className="text-cmt-text">{d.club.name}</b> · {d.club.league ?? ''}</span>
-          <span className="flex gap-3"><Link to="/scout?view=teams" className="text-cmt-blurple hover:underline">Takımlar</Link><Link to="/squad" className="text-cmt-blurple hover:underline">Kendi kadrom</Link></span>
+          <span className="flex gap-3"><Link to={`/club-review?team=${teamId}`} className="font-semibold text-cmt-blurple hover:underline">Kulüp incelemesi</Link><Link to="/scout?view=teams" className="text-cmt-blurple hover:underline">Takımlar</Link><Link to="/squad" className="text-cmt-blurple hover:underline">Kendi kadrom</Link></span>
         </div>
       )}
       <SquadHeader d={d} view={view} setView={setView} fullStats={fullStats} setFullStats={setFullStats}

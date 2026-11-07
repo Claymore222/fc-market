@@ -45,6 +45,7 @@
 | **Transfer önerileri** | Kadronu ligle kıyaslayıp önceliği çıkarır (ör. "Kaleci, sonra merkez orta saha"). Bütçene uyan adayları neden önerildiğiyle listeler; transfer paketi kurabilirsin. |
 | **Takım planı** | Diziliş, oyun anlayışı ve bütçe tercihine göre kadro derinliği ve gelecek sezon ihtiyaçları. |
 | **Gençler, kupalar, maçlar, akış** | Altyapı ve gözlemci ağı, kazanılan kupalar, maç analizleri, iki tarih arasındaki değişimler (transferler, OVR artışları). |
+| **Kulüp incelemesi** | İş teklifi mi geldi? Herhangi bir takımın nasıl oynadığını, gidersen hangi mevkilere oyuncu lazım olacağını, tahmini bütçesini ve senin kulübünle kıyasını gör. |
 | **İzleme listesi ve karşılaştırma** | Oyuncuları not ve hedef fiyatla takibe al, yan yana karşılaştır. |
 | **Canlı senkron** | Oyunda kaydettiğin an veriler ~10 saniyede güncellenir. Uygulama ~1 saniyede açılır. |
 | **Kendini günceller** | Yeni sürüm çıkınca haber verir; *Şimdi güncelle* deyince indirir, doğrular, kurar ve yeniden açılır. |

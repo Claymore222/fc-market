@@ -799,3 +799,20 @@ Kayıt arşivinden çözülen **3.894 gerçek bonservisli erkek oyuncu transferi
 - `ReferenceWage`: `10.000`, `WageElasticity`: `0,52`
 - `ContractMultipliers`: `0 → 0,4`, `1 → 0,7`, `2+ → 1,0`
 - `RoundTo`: `50.000`
+
+## Kulüp incelemesi — 07.11.2026
+
+Scout → Takımlar → **İncele** (ya da başka bir kulübün kadro sayfasındaki *Kulüp incelemesi*): kullanıcının gitmeyi
+düşündüğü bir takımı kendi takımı gibi değerlendirir. API: `GET /api/club/review?teamId=` (salt-okunur).
+
+| Bölüm | Kaynak | Not |
+|---|---|---|
+| Diziliş | `formations` (field-map `teamFormation`): `formationname`, `defenders/midfielders/attackers`, `position0..10` (slot kodu → `slotPositions`) | Takımın oyundaki kayıtlı varsayılan taktiği; maç içinde yapay zekâ değiştirebilir. FC 27 kaydında 871 takımda dolu. |
+| Diziliş karakteri | `formations.offensiverating` | Dizilişe bağlı 0–4 (5-4-1=0, 5-3-2=1, 4-2-3-1=2, 4-3-3/3-4-2-1=3, 3-4-3=4); takımın ayrı bir tercihi değil. Etiketler `config/club-review.json`. |
+| Oyun kurma | `teams.buildupplay` | 0–3; yalnız 2 = "Dengeli" doğrulandı. Diğer kodlar etiketsiz gösterilir. |
+| Savunma çizgisi | `teams.defensivedepth` | 25–95, lig geneli ort. ~51. < 40 derin, > 60 yüksek (`club-review.json` → `defensiveLine`). Ligin ortalaması yanında gösterilir. |
+| İhtiyaçlar | Kadro derinliği motoru (`DepthAnalysis`), incelenen takım "kendi takımı" sayılarak | Kayıtlı diziliş `squad-analysis.json`'da yoksa aynı 11 yerli ya da en çok ortak temel mevkisi olan diziliş kullanılır ("en yakın tanımlı diziliş" etiketi). 3-4-2-1 bu iş için eklendi. Lig kıyası o takımın kendi ligindeki kulüplerle. |
+| Tahmini bütçe | `teams.clubworth` | Oyun yapay zekâ kulüplerinin bütçesini kayıtta tutmuyor. Sezon başı transfer bütçesi ≈ 2637,3 × kulüp değeri ^ 0,7646; kullanıcının 5 gerçek sezon başı bütçesine (Colchester, Chesterfield, Gençlerbirliği, Fenerbahçe ×2; 3 lig) log-log kalibre, hepsi ±%1. Ekranda ±%15 aralık. Kulüp değeri kalibre kulüplerin aralığının 1,25 katı dışındaysa "kaba işaret" uyarısı (ör. Real Madrid ~514 M€ güvenilir değil). Maaş bütçesi tahmin edilmez. |
+
+Kullanıcı kulübüne ait girdiler (gerçek bütçe, maaş alanı, yönetim hedefi) incelenen takım için okunmaz. **İş teklifleri**
+ne veritabanı tablolarında ne de çözülen kariyer bloklarında var; ayrı bir kayıt araştırması gerekir (yol haritası 2).

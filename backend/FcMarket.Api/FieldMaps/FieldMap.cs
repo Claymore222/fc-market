@@ -48,6 +48,8 @@ public sealed class FieldMap
     public Dictionary<string, string> CareerManager { get; set; } = new();
     public Dictionary<string, string> CareerSuspensions { get; set; } = new();
     public Dictionary<string, string> CareerPreseason { get; set; } = new();
+    /// <summary>Takımın kayıtlı dizilişi (formations): ad, hücum ağırlığı, 11 mevki kodu.</summary>
+    public Dictionary<string, string> TeamFormation { get; set; } = new();
     public Dictionary<string, string> CareerFinance { get; set; } = new();
     public Dictionary<string, string> CareerTransfer { get; set; } = new();
     public Dictionary<string, string> CareerTransaction { get; set; } = new();
@@ -98,6 +100,7 @@ public sealed class FieldMap
         yield return ("player", Player);
         yield return ("names", Names);
         yield return ("team", Team);
+        yield return ("teamFormation", TeamFormation);
         yield return ("leagueTeamLink", LeagueTeamLink);
         yield return ("league", League);
         yield return ("nation", Nation);

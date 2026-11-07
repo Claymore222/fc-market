@@ -62,6 +62,8 @@ builder.Services.AddSingleton(sp => new ReloadingJsonFile<AnalysisConfig>(Resolv
 builder.Services.AddSingleton<SquadAnalysisService>();
 builder.Services.AddSingleton(sp => new ReloadingJsonFile<RecruitmentConfig>(Resolve("config/recruitment-profiles.json"), sp.GetRequiredService<ILoggerFactory>().CreateLogger("RecruitmentConfig")));
 builder.Services.AddSingleton<RecruitmentService>();
+builder.Services.AddSingleton(sp => new ReloadingJsonFile<ClubReviewConfig>(Resolve("config/club-review.json"), sp.GetRequiredService<ILoggerFactory>().CreateLogger("ClubReviewConfig")));
+builder.Services.AddSingleton<ClubReviewService>();
 builder.Services.AddSingleton<RecruitmentBoardService>();
 builder.Services.AddSingleton(sp => new ReloadingJsonFile<TransferPlanConfig>(Resolve("config/transfer-plans.json"), sp.GetRequiredService<ILoggerFactory>().CreateLogger("TransferPlanConfig")));
 builder.Services.AddSingleton(sp => new ReloadingJsonFile<TransferSuggestionConfig>(Resolve("config/transfer-suggestions.json"), sp.GetRequiredService<ILoggerFactory>().CreateLogger("TransferSuggestionConfig")));

@@ -67,6 +67,7 @@ export function TeamsTable() {
                 </th>
               ))}
               <th className="px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-gray-400">EN İYİ OYUNCU</th>
+              <th className="px-3 py-2"><span className="sr-only">Kulüp incelemesi</span></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-cmt-line">
@@ -84,6 +85,8 @@ export function TeamsTable() {
                 <td className="px-3 py-2 text-right font-mono text-gray-300">{dec1(t.averageAge)}</td>
                 <td className="px-3 py-2 text-right font-mono text-gray-200">{money(t.squadValue)}</td>
                 <td className="px-3 py-2 text-gray-300">{t.bestPlayer} <span className="font-mono text-gray-500">{t.bestPlayerOverall ?? ''}</span></td>
+                <td className="px-3 py-2 text-right">{!t.isUser && <button type="button" className="btn" aria-label={`${t.name} kulüp incelemesi`}
+                  onClick={e => { e.stopPropagation(); navigate(`/club-review?team=${t.id}`) }} onKeyDown={e => e.stopPropagation()}>İncele</button>}</td>
               </tr>
             ))}
           </tbody>

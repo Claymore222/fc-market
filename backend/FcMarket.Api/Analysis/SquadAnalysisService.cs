@@ -40,7 +40,7 @@ public sealed class SquadAnalysisService(CareerDb db, AppDb appDb, FieldMapProvi
     /// <summary>Every club of the user's league from this snapshot, read once per revision for the like-with-like comparison.</summary>
     IReadOnlyList<LeagueClub> LeagueClubs(SqliteConnection con, ResolvedSchema schema, FieldMap map, SnapshotInfo snap)
     {
-        var key = snap.SnapshotId + "|" + snap.Revision;
+        var key = snap.SnapshotId + "|" + snap.Revision + "|" + snap.UserTeamId;
         if (leagueClubs.TryGetValue(key, out var cached)) return cached;
         if (snap.UserTeamId is not { } userTeam || !schema.HasTable(map.LeagueTeamLink) || !schema.HasTable(map.SquadLink) || !schema.HasTable(map.Player) ||
             schema.Column(map.SquadLink, "teamId") is not { } teamColumn || schema.Column(map.Player, "id") is not { } idColumn) return [];
@@ -80,7 +80,9 @@ public sealed class SquadAnalysisService(CareerDb db, AppDb appDb, FieldMapProvi
         return leagueClubs[key] = clubs;
     }
 
-    public AnalysisContext Context(string? saveUid)
+    /// <param name="reviewTeamId">Kulüp incelemesi: başka bir takımın kadrosu aynı motorla, o takım "kendi takımı" sayılarak
+    /// okunur. Yalnız kullanıcı kulübüne ait girdiler (bütçe, maaş alanı, yönetim hedefi) bu durumda boş kalır.</param>
+    public AnalysisContext Context(string? saveUid, int? reviewTeamId = null)
     {
         var timer = Stopwatch.StartNew();
         var cfg = rules.Current;
@@ -139,6 +141,12 @@ public sealed class SquadAnalysisService(CareerDb db, AppDb appDb, FieldMapProvi
             object? Cell(Dictionary<string, object?>? r, string f) => r?.GetValueOrDefault(f);
             Dictionary<int, Dictionary<string, object?>> Indexed(List<Dictionary<string, object?>> rows, string key) => rows
                 .Where(r => Int(Cell(r, key)) is not null).GroupBy(r => Int(Cell(r, key))!.Value).ToDictionary(g => g.Key, g => g.First());
+            var review = reviewTeamId is { } reviewed && reviewed != snap.UserTeamId;
+            if (review)
+            {
+                var row = Read(map.Team, ["name"], "id", reviewTeamId).FirstOrDefault() ?? throw new NotFoundException("Takım bulunamadı.");
+                snap = snap with { UserTeamId = reviewTeamId, UserTeamName = Convert.ToString(Cell(row, "name")), TransferBudget = null, WageBudget = null };
+            }
 
             var links = Read(map.SquadLink, ["playerId", "slot", "injury", "form"], "teamId", snap.UserTeamId);
             ids.UnionWith(links.Select(r => Int(Cell(r, "playerId"))).OfType<int>());
@@ -203,7 +211,7 @@ public sealed class SquadAnalysisService(CareerDb db, AppDb appDb, FieldMapProvi
                     Int(Cell(p, "foot")) is { } foot ? map.Feet.GetValueOrDefault(foot.ToString(CultureInfo.InvariantCulture)) : null,
                     Ratings(map, playerAttributes, positions, Attribute(Cell(p, "overall"))));
             }).ToArray();
-            var finance = Read(map.CareerFinance, ["transferBudget", "wageHeadroom"]).FirstOrDefault();
+            var finance = review ? null : Read(map.CareerFinance, ["transferBudget", "wageHeadroom"]).FirstOrDefault();
             var team = Read(map.Team, ["buildUpPlay", "defensiveDepth"], "id", snap.UserTeamId).FirstOrDefault();
             var transfer = Number(Cell(finance, "transferBudget"));
             AnalysisValue Val(object? value, AnalysisOrigin? origin, string? note = null, bool unverified = false) =>
@@ -238,9 +246,9 @@ public sealed class SquadAnalysisService(CareerDb db, AppDb appDb, FieldMapProvi
                 .Select(r => new AnalysisRole(int.Parse(r.Key), r.Value.Name, r.Value.Position ?? "")).Where(r => r.Position.Length > 0).ToArray();
             logger.LogInformation("Squad context {Scope} snapshot {Snapshot} revision {Revision} source {Source} rules {Config} players {Players} incomplete {Incomplete} elapsedMs {Elapsed}",
                 snap.CareerKey, snap.SnapshotId, snap.Revision, snap.Source, configVersion, players.Length, coverage.Count(c => c.State != "known"), timer.ElapsedMilliseconds);
-            return new(snap, snap.CareerKey ?? snap.SaveUid, snap.Source == "save" ? "saved" : "preview", configVersion,
+            return new(snap, (snap.CareerKey ?? snap.SaveUid) + (review ? "#team" + reviewTeamId : ""), snap.Source == "save" ? "saved" : "preview", configVersion,
                 suggested, players, inputs, coverage, cfg, roles, leagues,
-                ClubService.Objectives(con, schema, snap.SnapshotId, _ => null)?.FirstOrDefault(o => o.Kind == 0), LeagueClubs(con, schema, map, snap));
+                review ? null : ClubService.Objectives(con, schema, snap.SnapshotId, _ => null)?.FirstOrDefault(o => o.Kind == 0), LeagueClubs(con, schema, map, snap));
         }
         finally { con.Execute("ROLLBACK;"); }
     }

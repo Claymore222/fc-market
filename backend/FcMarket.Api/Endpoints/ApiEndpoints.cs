@@ -33,6 +33,7 @@ public static class ApiEndpoints
         api.MapPost("/recruitment/plan/preview", (TransferPlanService p, string? saveUid, TransferPlanRequest body) => p.Preview(saveUid, body));
         api.MapPost("/recruitment/plan/suggestions", (TransferPlanService p, string? saveUid, TransferPlanSuggestionRequest body) => p.Suggest(saveUid, body));
         api.MapPut("/recruitment/plan", (TransferPlanService p, string? saveUid, TransferPlanRequest body) => p.Save(saveUid, body));
+        api.MapGet("/club/review", (ClubReviewService r, string? saveUid, int teamId) => r.Get(saveUid, teamId));
         api.MapGet("/regens", (RegenService r, string? saveUid) => r.Get(saveUid));
         api.MapGet("/snapshots", (MarketService m, string? saveUid) => m.Snapshots(saveUid));
         api.MapGet("/filters/options", (MarketService m, string? saveUid) => m.FilterOptions(saveUid));

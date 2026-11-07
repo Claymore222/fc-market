@@ -21,6 +21,7 @@ import { GuidePage } from './pages/GuidePage'
 import { isCareerEntered, onHostMessage, postHost } from './lib/host'
 import { AlertTriangle } from 'lucide-react'
 import { gameDate } from './lib/format'
+import { ClubReviewPage } from './pages/ClubReviewPage'
 import { AutomationSettings } from './components/AutomationSettings'
 import { UpdateBanner } from './components/UpdateNotice'
 import { hasOpenWarnings, ImportIssues, ImportWarnings } from './components/ImportIssues'
@@ -139,6 +140,7 @@ onRefresh={handleRefresh}
               <Route path="/shortlist" element={<ShortlistPage />} />
               <Route path="/trophies" element={<TrophiesPage />} />
               <Route path="/compare" element={<ComparePage />} />
+              <Route path="/club-review" element={<ClubReviewPage />} />
               <Route path="/transfer" element={<RecruitmentHubPage />} />
               <Route path="/transfer/plan" element={<SquadAnalysisPage />} />
               <Route path="/transfer/market" element={<TransferPage />} />
